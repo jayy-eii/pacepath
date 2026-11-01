@@ -1,0 +1,730 @@
+[
+  {
+    "id": "sign_error_transposing",
+    "conceptId": "balancing-equations",
+    "prerequisiteConceptId": "integers",
+    "name": {
+      "en": "Sign Error when Transposing Terms",
+      "hi": "पद बदलते समय चिह्न (Sign) की त्रुटि"
+    },
+    "description": {
+      "en": "Adding instead of subtracting (or vice versa) when moving a constant term across the equals sign.",
+      "hi": "बराबर चिह्न (=) के दूसरी तरफ पद ले जाते समय जोड़ने की जगह घटाना या घटाने की जगह जोड़ देना।"
+    },
+    "kidFriendlyExplanation": {
+      "en": "When a term jumps over the '=' bridge, its sign must flip to the opposite operation!",
+      "hi": "जब कोई संख्या बराबर '=' के पुल को पार करती है, तो उसका निशान (जोड़/घटाव) उलट जाता है!"
+    },
+    "whyItHappens": {
+      "en": "Students see '+ 6' and automatically add 6 to the other side because they associate the existing plus sign with addition.",
+      "hi": "छात्र '+ 6' देखकर दाईं तरफ भी 6 जोड़ देते हैं, क्योंकि उनका ध्यान सिर्फ संख्या के आगे लगे '+' पर होता है।"
+    },
+    "miniLesson": [
+      {
+        "step": 1,
+        "text": {
+          "en": "Identify the operation tying the term to x. If it is '+ c', the inverse operation is '- c'.",
+          "hi": "पहचानें कि संख्या x के साथ कैसे जुड़ी है। यदि '+ c' है, तो उल्टा काम '- c' होगा।"
+        }
+      },
+      {
+        "step": 2,
+        "text": {
+          "en": "Do the inverse operation to BOTH sides to keep the scale balanced.",
+          "hi": "तराजू को संतुलित रखने के लिए दोनों तरफ वही उल्टी क्रिया (घटाव) करें।"
+        }
+      },
+      {
+        "step": 3,
+        "text": {
+          "en": "Simplify: 2x + 6 - 6 = 14 - 6 becomes 2x = 8.",
+          "hi": "सरल करें: 2x + 6 - 6 = 14 - 6 बन जाता है 2x = 8।"
+        }
+      }
+    ],
+    "exampleWrong": {
+      "en": "2x + 6 = 14  →  2x = 14 + 6 = 20  →  x = 10",
+      "hi": "2x + 6 = 14  →  2x = 14 + 6 = 20  →  x = 10"
+    },
+    "exampleRight": {
+      "en": "2x + 6 = 14  →  2x = 14 - 6 = 8  →  x = 4",
+      "hi": "2x + 6 = 14  →  2x = 14 - 6 = 8  →  x = 4"
+    }
+  },
+  {
+    "id": "distribute_first_term_only",
+    "conceptId": "linear-equations-distributive",
+    "prerequisiteConceptId": "algebraic-expressions",
+    "name": {
+      "en": "Distributing to First Term Only",
+      "hi": "कोष्ठक के केवल पहले पद में गुणा करना"
+    },
+    "description": {
+      "en": "Multiplying the outside factor with only the first term inside the parentheses and leaving the second term untouched.",
+      "hi": "कोष्ठक के बाहर वाली संख्या से केवल पहले पद (x) को गुणा करना और दूसरे पद को वैसे ही छोड़ देना।"
+    },
+    "kidFriendlyExplanation": {
+      "en": "The number outside the bracket is like an invitation: EVERYONE inside gets a copy!",
+      "hi": "कोष्ठक के बाहर की संख्या एक दावत जैसी है: कोष्ठक के अंदर के हर पद को उससे गुणा करना होगा!"
+    },
+    "whyItHappens": {
+      "en": "Students multiply 2 by x to get 2x, and then simply copy down '+ 3' without multiplying 2 by 3.",
+      "hi": "छात्र 2 को x से गुणा करके 2x लिख देते हैं और फिर बिना 3 से गुणा किए सीधे '+ 3' उतार लेते हैं।"
+    },
+    "miniLesson": [
+      {
+        "step": 1,
+        "text": {
+          "en": "Draw arrows from the outside factor to each term inside the bracket: a × (b + c).",
+          "hi": "बाहरी संख्या से कोष्ठक के प्रत्येक पद तक तीर बनाएं: a × (b + c)।"
+        }
+      },
+      {
+        "step": 2,
+        "text": {
+          "en": "Multiply: a × b = ab, and a × c = ac.",
+          "hi": "गुणा करें: a × b = ab, और a × c = ac।"
+        }
+      },
+      {
+        "step": 3,
+        "text": {
+          "en": "For 2(x + 3), calculate 2 × x = 2x and 2 × 3 = 6, yielding 2x + 6.",
+          "hi": "2(x + 3) के लिए: 2 × x = 2x और 2 × 3 = 6, परिणाम 2x + 6 होगा।"
+        }
+      }
+    ],
+    "exampleWrong": {
+      "en": "2(x + 3) = 14  →  2x + 3 = 14  →  2x = 11  →  x = 5.5",
+      "hi": "2(x + 3) = 14  →  2x + 3 = 14  →  2x = 11  →  x = 5.5"
+    },
+    "exampleRight": {
+      "en": "2(x + 3) = 14  →  2x + 6 = 14  →  2x = 8  →  x = 4",
+      "hi": "2(x + 3) = 14  →  2x + 6 = 14  →  2x = 8  →  x = 4"
+    }
+  },
+  {
+    "id": "subtract_coefficient_instead_of_divide",
+    "conceptId": "basic-equations",
+    "prerequisiteConceptId": "whole-numbers",
+    "name": {
+      "en": "Subtracting Coefficient Instead of Dividing",
+      "hi": "गुणांक को भाग देने के बजाय घटा देना"
+    },
+    "description": {
+      "en": "Treating a multiplied coefficient as an added number and subtracting it from the other side.",
+      "hi": "गुणा में लिखे गुणांक (जैसे 2x या 2(x+3)) को घटाव मानकर दूसरी तरफ से घटा देना।"
+    },
+    "kidFriendlyExplanation": {
+      "en": "When a number is glued to a bracket or variable with multiplication, use division to unglue it, not subtraction!",
+      "hi": "जब कोई संख्या चर या कोष्ठक से गुणा द्वारा चिपकी हो, तो उसे हटाने के लिए भाग का प्रयोग करें, घटाव का नहीं!"
+    },
+    "whyItHappens": {
+      "en": "Students confuse 2(x+3) or 2x with '2 + ...', thinking any positive number can be eliminated by subtracting.",
+      "hi": "छात्र 2x को '2 + x' समझ लेते हैं और सोचते हैं कि 2 को घटाकर अलग किया जा सकता है।"
+    },
+    "miniLesson": [
+      {
+        "step": 1,
+        "text": {
+          "en": "Notice the relationship: 2(x+3) means 2 MULTIPLIED by (x+3).",
+          "hi": "संबंध देखें: 2(x+3) का अर्थ है 2 का (x+3) से गुणा।"
+        }
+      },
+      {
+        "step": 2,
+        "text": {
+          "en": "The inverse of multiplying by 2 is dividing both sides by 2.",
+          "hi": "2 से गुणा का उल्टा दोनों तरफ 2 से भाग देना है।"
+        }
+      },
+      {
+        "step": 3,
+        "text": {
+          "en": "14 ÷ 2 = 7, giving x + 3 = 7 (not 14 - 2 = 12).",
+          "hi": "14 ÷ 2 = 7, जिससे x + 3 = 7 बनता है (14 - 2 = 12 नहीं)।"
+        }
+      }
+    ],
+    "exampleWrong": {
+      "en": "2(x + 3) = 14  →  x + 3 = 14 - 2 = 12  →  x = 9",
+      "hi": "2(x + 3) = 14  →  x + 3 = 14 - 2 = 12  →  x = 9"
+    },
+    "exampleRight": {
+      "en": "2(x + 3) = 14  →  x + 3 = 14 / 2 = 7  →  x = 4",
+      "hi": "2(x + 3) = 14  →  x + 3 = 14 / 2 = 7  →  x = 4"
+    }
+  },
+  {
+    "id": "combine_unlike_terms",
+    "conceptId": "algebraic-expressions",
+    "prerequisiteConceptId": "integers",
+    "name": {
+      "en": "Combining Unlike Terms",
+      "hi": "असमान पदों को जोड़ना"
+    },
+    "description": {
+      "en": "Adding a coefficient and a constant number together as if they were like terms (e.g. 2x + 3 = 5x or 5).",
+      "hi": "चर वाले पद और अचर संख्या को आपस में जोड़ देना (जैसे 2x + 3 को 5x या 5 लिख देना)।"
+    },
+    "kidFriendlyExplanation": {
+      "en": "You can't add 2 apples and 3 rupees to get 5 apple-rupees! Variable terms and constants stay separate.",
+      "hi": "आप 2 सेब और 3 रुपयों को जोड़कर 5 सेब-रुपये नहीं बना सकते! चर और संख्याएँ अलग ही रहते हैं।"
+    },
+    "whyItHappens": {
+      "en": "Students feel uncomfortable leaving an expression like '2x + 3' unsolved and want a single combined term.",
+      "hi": "छात्रों को लगता है कि '2x + 3' अधूरा है, इसलिए वे दोनों को जोड़कर एक पद बना देते हैं।"
+    },
+    "miniLesson": [
+      {
+        "step": 1,
+        "text": {
+          "en": "Underline variable terms and circle constant numbers.",
+          "hi": "चर वाले पदों के नीचे रेखा खींचें और सादी संख्याओं पर गोला लगाएं।"
+        }
+      },
+      {
+        "step": 2,
+        "text": {
+          "en": "Only combine terms with the exact same variable and power.",
+          "hi": "केवल उन्हीं पदों को जोड़ें जिनमें बिल्कुल समान चर और घात हों।"
+        }
+      },
+      {
+        "step": 3,
+        "text": {
+          "en": "2x + 3 cannot be simplified further — it remains 2x + 3.",
+          "hi": "2x + 3 को आगे नहीं जोड़ा जा सकता — यह 2x + 3 ही रहेगा।"
+        }
+      }
+    ],
+    "exampleWrong": {
+      "en": "2x + 3 = 13  →  5x = 13  →  x = 2.6",
+      "hi": "2x + 3 = 13  →  5x = 13  →  x = 2.6"
+    },
+    "exampleRight": {
+      "en": "2x + 3 = 13  →  2x = 13 - 3 = 10  →  x = 5",
+      "hi": "2x + 3 = 13  →  2x = 13 - 3 = 10  →  x = 5"
+    }
+  },
+  {
+    "id": "operate_on_one_side_only",
+    "conceptId": "balancing-equations",
+    "prerequisiteConceptId": "basic-equations",
+    "name": {
+      "en": "Operating on One Side Only",
+      "hi": "केवल एक ही पक्ष पर संक्रिया करना"
+    },
+    "description": {
+      "en": "Applying an operation (like adding, subtracting, or multiplying) to only one side of an equation without keeping the balance.",
+      "hi": "समीकरण के केवल एक ही तरफ जोड़ना, घटाना या भाग देना और दूसरी तरफ कुछ न करना।"
+    },
+    "kidFriendlyExplanation": {
+      "en": "An equation is a balanced weighing scale: whatever weight you add or remove on the left, you MUST do on the right!",
+      "hi": "समीकरण एक तराजू है: जो बदलाव आप बाईं ओर करेंगे, वही ठीक दाईं ओर भी करना होगा!"
+    },
+    "whyItHappens": {
+      "en": "Students focus entirely on removing an unwanted term on the left and forget the right side completely.",
+      "hi": "छात्रों का पूरा ध्यान बाईं ओर से पद हटाने पर रहता है और वे दाईं ओर करना भूल जाते हैं।"
+    },
+    "miniLesson": [
+      {
+        "step": 1,
+        "text": {
+          "en": "Visualize the '=' as the center pivot of a scale.",
+          "hi": "बराबर '=' को तराजू का बीच का कांटा समझें।"
+        }
+      },
+      {
+        "step": 2,
+        "text": {
+          "en": "Write the operation under BOTH sides before calculating.",
+          "hi": "गणना करने से पहले दोनों पक्षों के नीचे संक्रिया लिखें।"
+        }
+      },
+      {
+        "step": 3,
+        "text": {
+          "en": "In x + 7 = 15, subtract 7 from x + 7 AND subtract 7 from 15.",
+          "hi": "x + 7 = 15 में, x + 7 में से भी 7 घटाएं और 15 में से भी 7 घटाएं।"
+        }
+      }
+    ],
+    "exampleWrong": {
+      "en": "3x + 5 = 20  →  3x = 20 (forgot to subtract 5 from 20)  →  x = 6.67",
+      "hi": "3x + 5 = 20  →  3x = 20 (20 में से 5 घटाना भूल गए)  →  x = 6.67"
+    },
+    "exampleRight": {
+      "en": "3x + 5 = 20  →  3x = 20 - 5 = 15  →  x = 5",
+      "hi": "3x + 5 = 20  →  3x = 20 - 5 = 15  →  x = 5"
+    }
+  },
+  {
+    "id": "fraction_add_denominators",
+    "conceptId": "fractions-add",
+    "prerequisiteConceptId": "fractions-basics",
+    "name": {
+      "en": "Adding Denominators in Fractions",
+      "hi": "भिन्नों के हरों (Denominators) को जोड़ना"
+    },
+    "description": {
+      "en": "Adding the denominators together as well as the numerators (e.g. 1/3 + 1/3 = 2/6 instead of 2/3).",
+      "hi": "अंशों के साथ-साथ हरों को भी सीधे जोड़ देना (जैसे 1/3 + 1/3 = 2/6 लिख देना)।"
+    },
+    "kidFriendlyExplanation": {
+      "en": "The denominator tells you the size of the slice, not the count! 1 third + 1 third = 2 thirds, not 2 sixths.",
+      "hi": "हर (नीचे की संख्या) टुकड़े का आकार बताता है, गिनती नहीं! 1 तिहाई + 1 तिहाई = 2 तिहाई होते हैं, 2 छठा भाग नहीं।"
+    },
+    "whyItHappens": {
+      "en": "Students intuitively apply whole-number addition to both the top numbers and the bottom numbers.",
+      "hi": "छात्र पूर्ण संख्याओं के जोड़ का नियम ऊपर और नीचे दोनों संख्याओं पर लागू कर देते हैं।"
+    },
+    "miniLesson": [
+      {
+        "step": 1,
+        "text": {
+          "en": "Check if denominators match. If like, keep the denominator unchanged.",
+          "hi": "जांचें कि क्या हर समान हैं। यदि समान हैं, तो हर को वैसा ही रखें।"
+        }
+      },
+      {
+        "step": 2,
+        "text": {
+          "en": "Only add the numerators on top.",
+          "hi": "केवल ऊपर वाले अंशों को जोड़ें।"
+        }
+      },
+      {
+        "step": 3,
+        "text": {
+          "en": "1/4 + 2/4 = (1 + 2)/4 = 3/4.",
+          "hi": "1/4 + 2/4 = (1 + 2)/4 = 3/4।"
+        }
+      }
+    ],
+    "exampleWrong": {
+      "en": "1/3 + 1/3 = (1+1)/(3+3) = 2/6 = 1/3",
+      "hi": "1/3 + 1/3 = (1+1)/(3+3) = 2/6 = 1/3"
+    },
+    "exampleRight": {
+      "en": "1/3 + 1/3 = (1+1)/3 = 2/3",
+      "hi": "1/3 + 1/3 = (1+1)/3 = 2/3"
+    }
+  },
+  {
+    "id": "fraction_multiply_cross_confusion",
+    "conceptId": "fractions-mult-div",
+    "prerequisiteConceptId": "fractions-add",
+    "name": {
+      "en": "Cross-Multiplying During Fraction Multiplication",
+      "hi": "भिन्न गुणा में तिर्यक (Cross) गुणा का भ्रम"
+    },
+    "description": {
+      "en": "Cross-multiplying numerators and denominators when asked to multiply two fractions, confusing it with equation proportions.",
+      "hi": "दो भिन्नों के गुणनफल के समय आमने-सामने गुणा करने के बजाय तिर्यक गुणा कर देना।"
+    },
+    "kidFriendlyExplanation": {
+      "en": "When multiplying fractions, march straight across: top times top, bottom times bottom!",
+      "hi": "भिन्नों के गुणा में सीधे सामने चलें: ऊपर का ऊपर से गुणा, नीचे का नीचे से गुणा!"
+    },
+    "whyItHappens": {
+      "en": "Cross-multiplication is taught for comparing fractions or solving proportions, leading students to use it everywhere.",
+      "hi": "भिन्नों की तुलना या अनुपात में तिर्यक गुणा सीखने के कारण छात्र इसे सामान्य गुणा में भी लगा देते हैं।"
+    },
+    "miniLesson": [
+      {
+        "step": 1,
+        "text": {
+          "en": "Set up top × top and bottom × bottom.",
+          "hi": "अंश × अंश और हर × हर का रूप बनाएं।"
+        }
+      },
+      {
+        "step": 2,
+        "text": {
+          "en": "Multiply: (a/b) × (c/d) = (a × c) / (b × d).",
+          "hi": "गुणा करें: (a/b) × (c/d) = (a × c) / (b × d)।"
+        }
+      },
+      {
+        "step": 3,
+        "text": {
+          "en": "(2/3) × (4/5) = (2 × 4) / (3 × 5) = 8/15.",
+          "hi": "(2/3) × (4/5) = (2 × 4) / (3 × 5) = 8/15।"
+        }
+      }
+    ],
+    "exampleWrong": {
+      "en": "(2/3) × (4/5) → 2 × 5 = 10, 3 × 4 = 12 → 10/12",
+      "hi": "(2/3) × (4/5) → 2 × 5 = 10, 3 × 4 = 12 → 10/12"
+    },
+    "exampleRight": {
+      "en": "(2/3) × (4/5) = (2 × 4) / (3 × 5) = 8/15",
+      "hi": "(2/3) × (4/5) = (2 × 4) / (3 × 5) = 8/15"
+    }
+  },
+  {
+    "id": "integer_sign_rule_error",
+    "conceptId": "integers",
+    "prerequisiteConceptId": "whole-numbers",
+    "name": {
+      "en": "Integer Sign Rule Confusion",
+      "hi": "पूर्णांक चिह्नों के नियमों में भ्रम"
+    },
+    "description": {
+      "en": "Applying multiplication sign rules ('two negatives make a positive') to addition or subtraction of negative numbers.",
+      "hi": "गुणा के नियम ('दो ऋण मिलकर धन बनते हैं') को ऋण संख्याओं के जोड़ या घटाव में लगा देना।"
+    },
+    "kidFriendlyExplanation": {
+      "en": "Borrowing ₹5 and then borrowing ₹3 means you owe MORE debt (-₹8), not that you suddenly have +₹8 in cash!",
+      "hi": "₹5 का कर्ज और फिर ₹3 का कर्ज मिलकर कुल ₹8 का कर्ज (-₹8) बनता है, न कि आपकी जेब में +₹8 आ जाते हैं!"
+    },
+    "whyItHappens": {
+      "en": "Students memorize 'negative and negative makes positive' as a catchphrase without understanding it applies only to multiplication.",
+      "hi": "छात्र 'माइनस-माइनस प्लस' रट लेते हैं और भूल जाते हैं कि यह केवल गुणा और कोष्ठक खोलने पर लागू होता है।"
+    },
+    "miniLesson": [
+      {
+        "step": 1,
+        "text": {
+          "en": "Think of positive as steps forward and negative as steps backward.",
+          "hi": "धन को आगे बढ़ना और ऋण को पीछे हटना समझें।"
+        }
+      },
+      {
+        "step": 2,
+        "text": {
+          "en": "Walking back 5 steps (-5) and then back 3 more steps (-3) leaves you 8 steps backward (-8).",
+          "hi": "5 कदम पीछे (-5) और फिर 3 कदम और पीछे (-3) जाने पर आप 8 कदम पीछे (-8) पहुँचते हैं।"
+        }
+      },
+      {
+        "step": 3,
+        "text": {
+          "en": "-5 + (-3) = -8. Only (-5) × (-3) = +15.",
+          "hi": "-5 + (-3) = -8। केवल (-5) × (-3) = +15 होता है।"
+        }
+      }
+    ],
+    "exampleWrong": {
+      "en": "-5 - 3 = +8",
+      "hi": "-5 - 3 = +8"
+    },
+    "exampleRight": {
+      "en": "-5 - 3 = -8",
+      "hi": "-5 - 3 = -8"
+    }
+  },
+  {
+    "id": "decimal_place_value_error",
+    "conceptId": "decimals",
+    "prerequisiteConceptId": "fractions-basics",
+    "name": {
+      "en": "Decimal Place Value / Longer Number Error",
+      "hi": "दशमलव स्थानीय मान में भ्रम"
+    },
+    "description": {
+      "en": "Thinking a decimal with more digits is larger (e.g. 0.125 > 0.4 because 125 > 4).",
+      "hi": "अधिक अंकों वाली दशमलव संख्या को बड़ा समझना (जैसे 0.125 को 0.4 से बड़ा मानना क्योंकि 125 > 4)।"
+    },
+    "kidFriendlyExplanation": {
+      "en": "Compare decimals column by column starting right after the point! 4 tenths is much bigger than 1 tenth.",
+      "hi": "दशमलव बिंदु के ठीक बाद के पहले अंक (दशांश) की तुलना करें! 4 दशांश (0.4) हमेशा 1 दशांश (0.125) से बड़ा होता है।"
+    },
+    "whyItHappens": {
+      "en": "Students look at digits after the decimal as ordinary whole numbers.",
+      "hi": "छात्र दशमलव के बाद के अंकों को सामान्य पूरी संख्या मान लेते हैं।"
+    },
+    "miniLesson": [
+      {
+        "step": 1,
+        "text": {
+          "en": "Pad the shorter decimal with trailing zeros so both have the same number of decimal places.",
+          "hi": "कम अंकों वाले दशमलव के अंत में शून्य लगाएं ताकि दोनों में बराबर अंक हो जाएं।"
+        }
+      },
+      {
+        "step": 2,
+        "text": {
+          "en": "0.4 becomes 0.400.",
+          "hi": "0.4 बन जाता है 0.400।"
+        }
+      },
+      {
+        "step": 3,
+        "text": {
+          "en": "Now compare 0.400 with 0.125: clearly 400 thousandths > 125 thousandths.",
+          "hi": "अब 0.400 और 0.125 की तुलना करें: 400 हजारवां भाग > 125 हजारवां भाग।"
+        }
+      }
+    ],
+    "exampleWrong": {
+      "en": "0.125 is greater than 0.4",
+      "hi": "0.125, 0.4 से बड़ा है"
+    },
+    "exampleRight": {
+      "en": "0.4 = 0.400 > 0.125",
+      "hi": "0.4 = 0.400 > 0.125"
+    }
+  },
+  {
+    "id": "ratio_additive_thinking",
+    "conceptId": "ratios",
+    "prerequisiteConceptId": "fractions-basics",
+    "name": {
+      "en": "Additive Thinking in Ratios",
+      "hi": "अनुपात में गुणन के बजाय जोड़ का उपयोग"
+    },
+    "description": {
+      "en": "Scaling a ratio by adding the same constant to both quantities instead of multiplying by a scale factor.",
+      "hi": "अनुपात को बड़ा करने के लिए समान संख्या से गुणा करने की जगह दोनों में समान संख्या जोड़ देना।"
+    },
+    "kidFriendlyExplanation": {
+      "en": "Ratios are recipes! To double chai for 4 people, you MULTIPLY the milk and tea by 2, not add 2 spoons.",
+      "hi": "अनुपात एक नुस्खा है! 4 लोगों के लिए चाय को दोगुना करने के लिए दूध और पत्ती को 2 से गुणा करते हैं, 2 चम्मच जोड़ते नहीं!"
+    },
+    "whyItHappens": {
+      "en": "Additive reasoning is natural in early childhood and resurfaces when proportional reasoning is tricky.",
+      "hi": "जोड़ का स्वभाविक विचार अनुपात में भी आ जाता है जब गुणन संबंध स्पष्ट न हो।"
+    },
+    "miniLesson": [
+      {
+        "step": 1,
+        "text": {
+          "en": "Find the multiplicative multiplier: new quantity ÷ old quantity.",
+          "hi": "गुणक ज्ञात करें: नया मान ÷ पुराना मान।"
+        }
+      },
+      {
+        "step": 2,
+        "text": {
+          "en": "Multiply the second term by the SAME multiplier.",
+          "hi": "दूसरे पद को भी उसी गुणक से गुणा करें।"
+        }
+      },
+      {
+        "step": 3,
+        "text": {
+          "en": "If ratio is 2 : 3 and 2 becomes 6 (×3), then 3 becomes 3 × 3 = 9 (not 3 + 4 = 7).",
+          "hi": "यदि अनुपात 2 : 3 है और 2 बदलकर 6 (×3) हो जाता है, तो 3 बदलकर 3 × 3 = 9 होगा (3 + 4 = 7 नहीं)।"
+        }
+      }
+    ],
+    "exampleWrong": {
+      "en": "Ratio 2:3. If first term becomes 6 (added 4), second term becomes 3 + 4 = 7.",
+      "hi": "अनुपात 2:3। यदि पहला पद 6 (4 जोड़ा) हो, तो दूसरा पद 3 + 4 = 7।"
+    },
+    "exampleRight": {
+      "en": "Ratio 2:3. If first term becomes 6 (multiplied by 3), second term becomes 3 × 3 = 9.",
+      "hi": "अनुपात 2:3। यदि पहला पद 6 (3 से गुणा) हो, तो दूसरा पद 3 × 3 = 9।"
+    }
+  },
+  {
+    "id": "percent_base_confusion",
+    "conceptId": "percentages",
+    "prerequisiteConceptId": "fractions-basics",
+    "name": {
+      "en": "Percent Base Confusion",
+      "hi": "प्रतिशत के आधार (Base) में भ्रम"
+    },
+    "description": {
+      "en": "Applying a percentage increase followed by the same percentage decrease and expecting to return to the original number.",
+      "hi": "किसी संख्या को 10% बढ़ाकर फिर 10% घटाने पर मूल संख्या प्राप्त होने की गलत धारणा।"
+    },
+    "kidFriendlyExplanation": {
+      "en": "A percentage depends on WHOLE it is measuring. 10% of ₹110 is ₹11, which is bigger than 10% of ₹100 (₹10)!",
+      "hi": "प्रतिशत इस बात पर निर्भर करता है कि आधार क्या है। ₹110 का 10% = ₹11 होता है, जो ₹100 के 10% (₹10) से बड़ा है!"
+    },
+    "whyItHappens": {
+      "en": "Students treat percentages as static fixed numbers (+10% - 10% = 0%).",
+      "hi": "छात्र प्रतिशत को साधारण स्थिर संख्या मान लेते हैं जैसे (+10 - 10 = 0)।"
+    },
+    "miniLesson": [
+      {
+        "step": 1,
+        "text": {
+          "en": "Always ask: 'Percent of WHAT base quantity?'",
+          "hi": "हमेशा पूछें: 'यह प्रतिशत किस आधार संख्या का है?'"
+        }
+      },
+      {
+        "step": 2,
+        "text": {
+          "en": "₹100 increased by 10% becomes ₹110.",
+          "hi": "₹100 में 10% की वृद्धि होने पर ₹110 हो जाता है।"
+        }
+      },
+      {
+        "step": 3,
+        "text": {
+          "en": "Decreasing ₹110 by 10% means subtracting 10% of 110 (₹11), leaving ₹99.",
+          "hi": "₹110 में 10% की कमी का मतलब है 110 का 10% (₹11) घटाना, जिससे ₹99 बचता है।"
+        }
+      }
+    ],
+    "exampleWrong": {
+      "en": "Price rises 10% then falls 10%  →  price is back to original 100%",
+      "hi": "कीमत 10% बढ़ी फिर 10% घटी  →  कीमत वापस 100% हो गई"
+    },
+    "exampleRight": {
+      "en": "100 × 1.10 = 110, then 110 × 0.90 = 99",
+      "hi": "100 × 1.10 = 110, फिर 110 × 0.90 = 99"
+    }
+  },
+  {
+    "id": "order_of_operations_error",
+    "conceptId": "whole-numbers",
+    "prerequisiteConceptId": "whole-numbers",
+    "name": {
+      "en": "Order of Operations / Left-to-Right Blindly",
+      "hi": "संक्रियाओं का क्रम (BODMAS) न मानना"
+    },
+    "description": {
+      "en": "Evaluating expressions strictly from left to right, doing addition before multiplication (e.g. 3 + 4 × 2 = 14 instead of 11).",
+      "hi": "बिना BODMAS नियम के सीधे बाएं से दाएं हल करना और गुणा से पहले जोड़ कर देना।"
+    },
+    "kidFriendlyExplanation": {
+      "en": "Multiplication is stronger than addition! Pack multiplication groups together first before adding.",
+      "hi": "गुणा जोड़ से अधिक शक्तिशाली है! जोड़ने से पहले गुणा वाले समूहों को पहले हल करें।"
+    },
+    "whyItHappens": {
+      "en": "We read text from left to right, so students naturally read and compute math expressions in the same order.",
+      "hi": "हम बाएं से दाएं पढ़ते हैं, इसलिए गणित के सवाल भी उसी क्रम में हल करने का भ्रम हो जाता है।"
+    },
+    "miniLesson": [
+      {
+        "step": 1,
+        "text": {
+          "en": "Remember BODMAS: Brackets, Orders, Division & Multiplication, then Addition & Subtraction.",
+          "hi": "BODMAS याद रखें: कोष्ठक, घात, भाग व गुणा, फिर जोड़ व घटाव।"
+        }
+      },
+      {
+        "step": 2,
+        "text": {
+          "en": "Put brackets around multiplication: 3 + (4 × 2).",
+          "hi": "गुणा के चारों तरफ कोष्ठक लगाएं: 3 + (4 × 2)।"
+        }
+      },
+      {
+        "step": 3,
+        "text": {
+          "en": "4 × 2 = 8, then 3 + 8 = 11.",
+          "hi": "4 × 2 = 8, फिर 3 + 8 = 11।"
+        }
+      }
+    ],
+    "exampleWrong": {
+      "en": "3 + 4 × 2 = 7 × 2 = 14",
+      "hi": "3 + 4 × 2 = 7 × 2 = 14"
+    },
+    "exampleRight": {
+      "en": "3 + 4 × 2 = 3 + 8 = 11",
+      "hi": "3 + 4 × 2 = 3 + 8 = 11"
+    }
+  },
+  {
+    "id": "exponent_multiply_base",
+    "conceptId": "exponents",
+    "prerequisiteConceptId": "whole-numbers",
+    "name": {
+      "en": "Multiplying Base by Power",
+      "hi": "आधार को घात से गुणा करना"
+    },
+    "description": {
+      "en": "Multiplying the base number by the exponent number instead of repeated multiplication (e.g. 2^3 = 6 instead of 8).",
+      "hi": "घातांक को आधार से गुणा कर देना (जैसे 2^3 को 2 × 3 = 6 लिख देना)।"
+    },
+    "kidFriendlyExplanation": {
+      "en": "The exponent tells you how many copies of the base to multiply together! 2³ is 2 × 2 × 2 = 8, not 2 × 3.",
+      "hi": "घात बताती है कि उस संख्या को खुद से कितनी बार गुणा करना है! 2³ का अर्थ है 2 × 2 × 2 = 8, न कि 2 × 3।"
+    },
+    "whyItHappens": {
+      "en": "Multiplication is the most familiar operation between two visible numbers.",
+      "hi": "दो संख्याओं को देखते ही छात्रों के मन में सबसे पहले साधारण गुणा का विचार आ जाता है।"
+    },
+    "miniLesson": [
+      {
+        "step": 1,
+        "text": {
+          "en": "Write out the base repeatedly as many times as the exponent indicates.",
+          "hi": "आधार को घात जितनी बार गुणा के रूप में फैलाकर लिखें।"
+        }
+      },
+      {
+        "step": 2,
+        "text": {
+          "en": "For 2³, write: 2 × 2 × 2.",
+          "hi": "2³ के लिए लिखें: 2 × 2 × 2।"
+        }
+      },
+      {
+        "step": 3,
+        "text": {
+          "en": "Calculate step-by-step: 2 × 2 = 4, then 4 × 2 = 8.",
+          "hi": "क्रमशः गुणा करें: 2 × 2 = 4, फिर 4 × 2 = 8।"
+        }
+      }
+    ],
+    "exampleWrong": {
+      "en": "2³ = 2 × 3 = 6",
+      "hi": "2³ = 2 × 3 = 6"
+    },
+    "exampleRight": {
+      "en": "2³ = 2 × 2 × 2 = 8",
+      "hi": "2³ = 2 × 2 × 2 = 8"
+    }
+  },
+  {
+    "id": "negative_power_or_squared_sign_error",
+    "conceptId": "exponents",
+    "prerequisiteConceptId": "integers",
+    "name": {
+      "en": "Sign Error with Negative Powers or Base Squaring",
+      "hi": "ऋणात्मक आधार या घात के वर्ग में चिह्न त्रुटि"
+    },
+    "description": {
+      "en": "Assuming negative base squared is negative (-3^2 vs (-3)^2), or thinking a negative exponent makes the result negative (e.g. 2^-1 = -2).",
+      "hi": "यह समझना कि ऋणात्मक घात परिणाम को ऋणात्मक बना देती है (जैसे 2^-1 = -2 समझना) या (-3)² = -9 लिखना।"
+    },
+    "kidFriendlyExplanation": {
+      "en": "A negative exponent flips the number into a fraction reciprocal, it never changes the number into a negative!",
+      "hi": "ऋणात्मक घात संख्या को उलटकर भिन्न (व्युत्क्रम) बना देती है, संख्या को माइनस नहीं बनाती! 2⁻¹ = 1/2।"
+    },
+    "whyItHappens": {
+      "en": "Students see the '-' in the power and believe it turns the entire value negative.",
+      "hi": "घात में '-' देखकर छात्रों को लगता है कि पूरा उत्तर ही ऋणात्मक हो जाएगा।"
+    },
+    "miniLesson": [
+      {
+        "step": 1,
+        "text": {
+          "en": "Remember the negative power rule: x^(-n) = 1 / (x^n).",
+          "hi": "ऋणात्मक घात का नियम याद रखें: x^(-n) = 1 / (x^n)।"
+        }
+      },
+      {
+        "step": 2,
+        "text": {
+          "en": "For 2^(-3), write 1 / (2^3).",
+          "hi": "2^(-3) के लिए लिखें: 1 / (2^3)।"
+        }
+      },
+      {
+        "step": 3,
+        "text": {
+          "en": "1 / (2^3) = 1/8 = 0.125 (positive fraction, not -6 or -8).",
+          "hi": "1 / (2^3) = 1/8 = 0.125 (धनात्मक भिन्न, -6 या -8 नहीं)।"
+        }
+      }
+    ],
+    "exampleWrong": {
+      "en": "2^(-3) = -8 or -6",
+      "hi": "2^(-3) = -8 या -6"
+    },
+    "exampleRight": {
+      "en": "2^(-3) = 1 / 2³ = 1/8",
+      "hi": "2^(-3) = 1 / 2³ = 1/8"
+    }
+  }
+]

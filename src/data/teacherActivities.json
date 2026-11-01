@@ -1,0 +1,1074 @@
+[
+  {
+    "conceptId": "whole-numbers",
+    "conceptName": {
+      "en": "Whole Numbers & Place Value",
+      "hi": "पूर्ण संख्याएं और स्थानीय मान"
+    },
+    "teachingTip": {
+      "en": "Use bundles of 10 matchsticks or chalk sticks to anchor place value before teaching standard vertical algorithms.",
+      "hi": "मानक लंबवत जोड़-घटाव से पहले 10 माचिस की तीलियों या चाक के बंडलों से स्थानीय मान को स्पष्ट करें।"
+    },
+    "misconceptionNote": {
+      "en": "Students often treat multi-digit numbers as concatenated single digits (e.g., seeing 205 as '2' and '5', ignoring the zero tens).",
+      "hi": "छात्र अक्सर बहु-अंकीय संख्याओं को अलग-अलग अंकों की तरह देखते हैं (उदा. 205 में शून्य दहाई को नजरअंदाज करना)।"
+    },
+    "activities": [
+      {
+        "title": {
+          "en": "Kirana Cashier: The ₹10 and ₹100 Currency Game",
+          "hi": "किराना कैशियर: ₹10 और ₹100 के नोटों का खेल"
+        },
+        "durationMinutes": 10,
+        "materials": {
+          "en": "Chalkboard, scrap paper slips for ₹100, ₹10, and ₹1 coins",
+          "hi": "ब्लैकबोर्ड, ₹100, ₹10, और ₹1 के कागज़ी टोकन"
+        },
+        "context": {
+          "en": "Paying bills at a local grocery store without change",
+          "hi": "किराना दुकान पर बिना छुट्टे पैसों के बिल का भुगतान"
+        },
+        "instructions": {
+          "en": [
+            "Call 3 volunteers to play the Shopkeeper, Customer, and Bank.",
+            "Customer buys rice worth ₹347. Customer must form ₹347 using minimum notes: 3 hundreds, 4 tens, 7 ones.",
+            "Challenge: Customer only has ₹100 notes. How does the shopkeeper break one ₹100 into ten ₹10s to give change?"
+          ],
+          "hi": [
+            "3 छात्रों को दुकानदार, ग्राहक और बैंक की भूमिका दें।",
+            "ग्राहक ₹347 का चावल खरीदता है। उसे न्यूनतम नोटों में भुगतान करना है: 3 सैकड़ा, 4 दहाई, 7 इकाई।",
+            "चुनौती: यदि ग्राहक केवल ₹100 के नोट दे, तो दुकानदार ₹100 को दस ₹10 के नोटों में कैसे बदलेगा?"
+          ]
+        },
+        "mathTakeaway": {
+          "en": "Regrouping in subtraction is physically trading 1 ten for 10 units, not 'borrowing 1' abstractly.",
+          "hi": "घटाव में पुनर्समूहन (हासिल) वास्तव में 1 दहाई को 10 इकाइयों में बदलना है।"
+        }
+      }
+    ]
+  },
+  {
+    "conceptId": "factors-multiples",
+    "conceptName": {
+      "en": "Factors, Multiples & Primes",
+      "hi": "गुणनखंड, गुणज और अभाज्य संख्याएं"
+    },
+    "teachingTip": {
+      "en": "Arrange students in rectangular marching parades to visualize factors before introducing prime factor trees.",
+      "hi": "अभाज्य गुणनखंड वृक्ष सिखाने से पहले छात्रों को आयताकार कतारों में खड़ा करके गुणनखंड दिखाएं।"
+    },
+    "misconceptionNote": {
+      "en": "Students confuse factors (which divide evenly into N) with multiples (which are N multiplied by integers).",
+      "hi": "छात्र अक्सर गुणनखंड (जो संख्या को पूरा विभाजित करते हैं) और गुणज (पहाड़े) में उलझ जाते हैं।"
+    },
+    "activities": [
+      {
+        "title": {
+          "en": "Morning Assembly Drill Formation",
+          "hi": "सुबह की प्रार्थना सभा ड्रिल कतार"
+        },
+        "durationMinutes": 10,
+        "materials": {
+          "en": "Chalk grid on blackboard or 24 pebbles/beads",
+          "hi": "ब्लैकबोर्ड पर ग्रिड या 24 कंकड़/मोती"
+        },
+        "context": {
+          "en": "Arranging 24 students in equal rows for Republic Day march-past",
+          "hi": "गणतंत्र दिवस परेड के लिए 24 छात्रों को बराबर पंक्तियों में खड़ा करना"
+        },
+        "instructions": {
+          "en": [
+            "Ask: 'In how many ways can 24 students stand in solid equal rectangles without anyone left out?'",
+            "Students call out pairs: 1×24, 2×12, 3×8, 4×6.",
+            "Now repeat with 17 students: only 1×17 is possible. Introduce why 17 is prime."
+          ],
+          "hi": [
+            "पूछें: '24 छात्रों को कितनी तरह से बराबर आयताकार कतारों में खड़ा किया जा सकता है?'",
+            "छात्र जोड़े बताएंगे: 1×24, 2×12, 3×8, 4×6।",
+            "अब 17 छात्रों के साथ दोहराएं: केवल 1×17 संभव है। समझाएं कि 17 अभाज्य संख्या क्यों है।"
+          ]
+        },
+        "mathTakeaway": {
+          "en": "Factors are the exact dimensions of rectangles that enclose a given area.",
+          "hi": "गुणनखंड उस आयत की सही भुजाएं हैं जो दी गई संख्या का क्षेत्रफल बनाती हैं।"
+        }
+      }
+    ]
+  },
+  {
+    "conceptId": "fractions-basics",
+    "conceptName": {
+      "en": "Fractions Basics & Equivalence",
+      "hi": "भिन्न की मूल बातें और समतुल्यता"
+    },
+    "teachingTip": {
+      "en": "Emphasize equal parts: folding paper strips horizontally and vertically reveals why 1/2 = 2/4 = 4/8.",
+      "hi": "कागज की पट्टियों को मोड़कर दिखाएं कि कैसे 1/2, 2/4 और 4/8 का क्षेत्रफल बिल्कुल समान होता है।"
+    },
+    "misconceptionNote": {
+      "en": "Students often believe larger denominators mean larger quantities (e.g. 1/8 > 1/4 because 8 > 4).",
+      "hi": "छात्र सोचते हैं कि बड़ा हर (denominator) बड़ी संख्या दर्शाता है (जैसे 1/8 > 1/4 क्योंकि 8 > 4)।"
+    },
+    "activities": [
+      {
+        "title": {
+          "en": "Roti Sharing & Halwa Pieces",
+          "hi": "रोटी बंटवारा और हलवे के टुकड़े"
+        },
+        "durationMinutes": 10,
+        "materials": {
+          "en": "Paper circles/squares or chalk circle on floor",
+          "hi": "कागज के गोल टुकड़े या फर्श पर चाक का घेरा"
+        },
+        "context": {
+          "en": "Sharing 1 chapati equally among friends at lunch tiffin",
+          "hi": "दोपहर के टिफिन में दोस्तों के बीच 1 चपाती को बराबर बांटना"
+        },
+        "instructions": {
+          "en": [
+            "Tear a paper roti in half. Each person gets 1/2.",
+            "Tear each half in half: now 4 equal slices. Take 2 slices: 2/4.",
+            "Place 2/4 directly over 1/2 to show they cover the exact same amount of food."
+          ],
+          "hi": [
+            "कागज की रोटी को आधा मोड़ें: प्रत्येक को 1/2 मिलता है।",
+            "प्रत्येक आधे को फिर से आधा मोड़ें: अब 4 टुकड़े हैं। 2 टुकड़े लें: 2/4।",
+            "2/4 को 1/2 के ऊपर रखकर दिखाएं कि दोनों का आकार बिल्कुल बराबर है।"
+          ]
+        },
+        "mathTakeaway": {
+          "en": "Multiplying numerator and denominator by 2 slices each piece smaller, but total quantity stays identical.",
+          "hi": "अंश और हर दोनों को 2 से गुणा करने पर टुकड़े छोटे होते हैं, लेकिन कुल मात्रा नहीं बदलती।"
+        }
+      }
+    ]
+  },
+  {
+    "conceptId": "fractions-add",
+    "conceptName": {
+      "en": "Fractions: Add & Subtract",
+      "hi": "भिन्नों का जोड़ और घटाव"
+    },
+    "teachingTip": {
+      "en": "Never teach 'cross-multiply' for fraction addition without drawing identical grid partitions first.",
+      "hi": "समान ग्रिड विभाजन दिखाए बिना भिन्नों के जोड़ के लिए 'तिर्यक गुणा' की शॉर्टकट ट्रिक कभी न सिखाएं।"
+    },
+    "misconceptionNote": {
+      "en": "Adding numerators and adding denominators straight across: a/b + c/d = (a+c)/(b+d).",
+      "hi": "छात्र अंश को अंश से और हर को हर से सीधे जोड़ देते हैं: a/b + c/d = (a+c)/(b+d)।"
+    },
+    "activities": [
+      {
+        "title": {
+          "en": "The Chai Wala's Milk Jugs",
+          "hi": "चाय वाले की दूध की केतली"
+        },
+        "durationMinutes": 10,
+        "materials": {
+          "en": "Two identical transparent plastic tumblers marked with chalk",
+          "hi": "चाक से चिन्हित दो समान पारदर्शी गिलास"
+        },
+        "context": {
+          "en": "Combining leftover milk: 1/2 litre and 1/3 litre into one pot",
+          "hi": "बचे हुए दूध को मिलाना: 1/2 लीटर और 1/3 लीटर एक बर्तन में"
+        },
+        "instructions": {
+          "en": [
+            "Show Tumbler A (1/2 full) and Tumbler B (1/3 full).",
+            "Ask: 'Can we say 1/2 + 1/3 = 2/5? Would 2/5 be less than half? But one cup already has half!'",
+            "Subdivide both into 6 equal units: 1/2 becomes 3/6, 1/3 becomes 2/6. Combine: 3/6 + 2/6 = 5/6."
+          ],
+          "hi": [
+            "गिलास A (1/2 भरा) और गिलास B (1/3 भरा) दिखाएं।",
+            "पूछें: 'क्या 1/2 + 1/3 = 2/5 हो सकता है? 2/5 तो आधे से भी कम है, जबकि हमारे पास पहले से आधा है!'",
+            "दोनों को 6 बराबर भागों में बांटें: 1/2 = 3/6 और 1/3 = 2/6। जोड़ें: 3/6 + 2/6 = 5/6।"
+          ]
+        },
+        "mathTakeaway": {
+          "en": "You cannot add fractions until the unit slice size (common denominator) is identical.",
+          "hi": "जब तक टुकड़ों का आकार (समान हर) बराबर न हो, भिन्नों को सीधे नहीं जोड़ा जा सकता।"
+        }
+      }
+    ]
+  },
+  {
+    "conceptId": "decimals",
+    "conceptName": {
+      "en": "Decimal Operations",
+      "hi": "दशमलव संक्रियाएं"
+    },
+    "teachingTip": {
+      "en": "Use Rupees and Paise to make tenths and hundredths concrete before multiplying decimals.",
+      "hi": "दशमलव गुणा से पहले रुपये और पैसों के उदाहरण से दशांश और शतांश की अवधारणा पक्की करें।"
+    },
+    "misconceptionNote": {
+      "en": "Believing numbers with more decimal digits are larger (e.g. 0.19 > 0.4 because 19 > 4).",
+      "hi": "यह सोचना कि अधिक अंकों वाला दशमलव बड़ा होता है (जैसे 0.19 > 0.4 क्योंकि 19 > 4)।"
+    },
+    "activities": [
+      {
+        "title": {
+          "en": "Speed Radar & Sprint Stopwatches",
+          "hi": "दौड़ प्रतियोगिता का स्टॉपवॉच समय"
+        },
+        "durationMinutes": 10,
+        "materials": {
+          "en": "Blackboard stopwatch display",
+          "hi": "ब्लैकबोर्ड पर स्टॉपवॉच समय सारणी"
+        },
+        "context": {
+          "en": "School sports day 100m sprint finish times",
+          "hi": "विद्यालय खेल दिवस की 100 मीटर दौड़ के परिणाम"
+        },
+        "instructions": {
+          "en": [
+            "Write 3 times: Runner A = 12.4 seconds, Runner B = 12.19 seconds, Runner C = 12.35 seconds.",
+            "Ask: 'Who won gold? (Lowest time wins).' Many pick Runner A thinking .4 is less than .19.",
+            "Normalize by adding trailing zero: 12.40s vs 12.19s vs 12.35s. Compare hundredths."
+          ],
+          "hi": [
+            "3 धावकों का समय लिखें: धावक A = 12.4 सेकंड, धावक B = 12.19 सेकंड, धावक C = 12.35 सेकंड।",
+            "पूछें: 'स्वर्ण पदक किसने जीता? (कम समय वाला)।' कई छात्र A चुनेंगे क्योंकि 4 < 19।",
+            "शून्य लगाकर बराबर करें: 12.40s, 12.19s, 12.35s। शतांश की तुलना करें।"
+          ]
+        },
+        "mathTakeaway": {
+          "en": "Tenths dominate hundredths: 4 tenths (40 paise) is always greater than 1 tenth and 9 hundredths (19 paise).",
+          "hi": "दशांश हमेशा शतांश से बड़ा होता है: 4 दशांश (40 पैसे) 1 दशांश 9 शतांश (19 पैसे) से बड़ा है।"
+        }
+      }
+    ]
+  },
+  {
+    "conceptId": "ratios",
+    "conceptName": {
+      "en": "Ratio & Comparison",
+      "hi": "अनुपात और तुलना"
+    },
+    "teachingTip": {
+      "en": "Emphasize multiplicative comparison: ratio tells 'how many times as much', not 'how much more'.",
+      "hi": "गुणात्मक तुलना पर जोर दें: अनुपात बताता है कि एक मात्रा दूसरी की 'कितने गुना' है।"
+    },
+    "misconceptionNote": {
+      "en": "Additive scaling: if ratio of red to blue is 2:3, student adds 2 to both to get 4:5 instead of multiplying by 2 to get 4:6.",
+      "hi": "जोड़ से तुलना करना: यदि लाल और नीले का अनुपात 2:3 है, तो छात्र दोनों में 2 जोड़कर 4:5 बना देते हैं, जबकि 2 से गुणा कर 4:6 होना चाहिए।"
+    },
+    "activities": [
+      {
+        "title": {
+          "en": "The Perfect Masala Chai Recipe",
+          "hi": "परफेक्ट मसाला चाय का अनुपात"
+        },
+        "durationMinutes": 10,
+        "materials": {
+          "en": "Chalkboard cups diagram",
+          "hi": "ब्लैकबोर्ड पर कप का चित्र"
+        },
+        "context": {
+          "en": "Making tea with a strict milk-to-water ratio of 2 cups milk to 1 cup water",
+          "hi": "2 कप दूध और 1 कप पानी के निश्चित अनुपात से चाय बनाना"
+        },
+        "instructions": {
+          "en": [
+            "State standard batch for 3 guests: 2 cups milk : 1 cup water (total 3 cups).",
+            "Ask: 'How to make tea for 12 guests without changing taste?'",
+            "Scale by factor of 4: 2×4 = 8 cups milk, 1×4 = 4 cups water (total 12 cups). Verify 8:4 = 2:1."
+          ],
+          "hi": [
+            "3 मेहमानों के लिए मानक अनुपात: 2 कप दूध : 1 कप पानी (कुल 3 कप)।",
+            "पूछें: 'स्वाद बदले बिना 12 मेहमानों के लिए चाय कैसे बनाएंगे?'",
+            "4 से गुणा करें: 2×4 = 8 कप दूध, 1×4 = 4 कप पानी। पुष्टि करें कि 8:4 = 2:1 है।"
+          ]
+        },
+        "mathTakeaway": {
+          "en": "Both quantities must be scaled by the same multiplier to preserve the relationship.",
+          "hi": "अनुपात समान रखने के लिए दोनों राशियों को एक ही संख्या से गुणा या भाग करना पड़ता है।"
+        }
+      }
+    ]
+  },
+  {
+    "conceptId": "integers",
+    "conceptName": {
+      "en": "Integers & Sign Rules",
+      "hi": "पूर्णांक और चिह्न नियम"
+    },
+    "teachingTip": {
+      "en": "Use profit/loss or above/below sea level analogies. Never just say 'minus minus becomes plus' without directional movement.",
+      "hi": "लाभ/हानि या सीढ़ियों पर आगे/पीछे चलने का मॉडल उपयोग करें। केवल रटवाएं नहीं।"
+    },
+    "misconceptionNote": {
+      "en": "Applying multiplication sign rules to addition (e.g. thinking -5 - 3 = +8 because 'two minuses make a plus').",
+      "hi": "गुणा के नियम जोड़ पर लागू करना (उदा. -5 - 3 = +8 सोचना क्योंकि 'माइनस माइनस प्लस होता है')।"
+    },
+    "activities": [
+      {
+        "title": {
+          "en": "Walking the Chalk Number Line",
+          "hi": "चाक संख्या रेखा पर कदमताल"
+        },
+        "durationMinutes": 10,
+        "materials": {
+          "en": "Numbered chalk line on classroom floor from -5 to +5",
+          "hi": "कक्षा के फर्श पर -5 से +5 तक चाक से बनी संख्या रेखा"
+        },
+        "context": {
+          "en": "A cricket batsman stepping out of the crease (+) or retreating (-)",
+          "hi": "क्रीज से आगे बढ़ना (+) या पीछे हटना (-)"
+        },
+        "instructions": {
+          "en": [
+            "Student stands at 0 facing Positive (Right).",
+            "Rule 1: '+' means face right, '-' means face left. Walking forward means '+', walking backward means '-'.",
+            "Try -2 - 3: Start at -2, subtraction means face left, walk forward 3 steps. Land on -5."
+          ],
+          "hi": [
+            "छात्र 0 पर धनात्मक (दाहिनी) दिशा की ओर मुंह करके खड़ा होता है।",
+            "नियम: '+' यानी दाईं ओर, '-' यानी बाईं ओर। आगे चलना जोड़ है, पीछे चलना घटाव है।",
+            "-2 - 3 करके देखें: -2 पर जाएं, घटाव यानी बाईं ओर घूमें, 3 कदम आगे चलें। छात्र -5 पर पहुंचेगा।"
+          ]
+        },
+        "mathTakeaway": {
+          "en": "Subtracting a positive number moves you leftward; subtracting a negative turns you around and moves rightward.",
+          "hi": "धनात्मक घटाने पर संख्या रेखा पर बाईं ओर जाते हैं; ऋणात्मक घटाने पर दाईं ओर।"
+        }
+      }
+    ]
+  },
+  {
+    "conceptId": "fractions-mult-div",
+    "conceptName": {
+      "en": "Fractions: Multiply & Divide",
+      "hi": "भिन्नों का गुणा और भाग"
+    },
+    "teachingTip": {
+      "en": "Frame fraction multiplication as 'taking a fraction OF a fraction', and division as 'how many fit inside'.",
+      "hi": "गुणा को 'हिस्से का हिस्सा' और भाग को 'कितने टुकड़े समा सकते हैं' के रूप में समझाएं।"
+    },
+    "misconceptionNote": {
+      "en": "Believing multiplication always makes numbers bigger and division always makes numbers smaller.",
+      "hi": "यह गलत धारणा कि गुणा हमेशा संख्या को बड़ा करता है और भाग हमेशा छोटा करता है।"
+    },
+    "activities": [
+      {
+        "title": {
+          "en": "Cutting Barfi Sweets",
+          "hi": "बर्फी के टुकड़े काटना"
+        },
+        "durationMinutes": 10,
+        "materials": {
+          "en": "A square sheet of paper representing a barfi tray",
+          "hi": "बर्फी की थाली दर्शाने वाला चौकोर कागज"
+        },
+        "context": {
+          "en": "Mithai shop cutting half a tray of barfi into thirds",
+          "hi": "मिठाई की दुकान में आधी थाली बर्फी को 3 बराबर हिस्सों में बांटना"
+        },
+        "instructions": {
+          "en": [
+            "Fold paper in half vertically and shade it: this is 1/2 tray left.",
+            "Customer asks for 1/3 of the remaining half: fold paper horizontally into 3 equal stripes.",
+            "Unfold and count the overlapping grid: 1 out of 6 total squares. 1/3 × 1/2 = 1/6."
+          ],
+          "hi": [
+            "कागज को लंबवत आधा मोड़ें और छायांकित करें: यह बची हुई 1/2 थाली है।",
+            "ग्राहक बचे हुए आधे का 1/3 मांगता है: कागज को क्षैतिज रूप से 3 पट्टियों में मोड़ें।",
+            "खोलें और कुल खाने गिनें: 6 में से 1 खाना। 1/3 × 1/2 = 1/6।"
+          ]
+        },
+        "mathTakeaway": {
+          "en": "Multiplying fractions produces a piece smaller than either original factor.",
+          "hi": "उचित भिन्नों का गुणनफल हमेशा दोनों मूल भिन्नों से छोटा होता है।"
+        }
+      }
+    ]
+  },
+  {
+    "conceptId": "proportions",
+    "conceptName": {
+      "en": "Proportions & Unitary Method",
+      "hi": "समानुपात और ऐकिक नियम"
+    },
+    "teachingTip": {
+      "en": "Always find the value of 1 single unit first before scaling up to N units in real life.",
+      "hi": "कई इकाइयों का मूल्य निकालने से पहले हमेशा 1 इकाई का मूल्य (ऐकिक नियम) निकालें।"
+    },
+    "misconceptionNote": {
+      "en": "Mixing up direct and inverse proportion (e.g. thinking more workers means more days to build a wall).",
+      "hi": "सीधे और व्युत्क्रमानुपात में भ्रम (जैसे सोचना कि मजदूर बढ़ाने से दीवार बनाने में अधिक दिन लगेंगे)।"
+    },
+    "activities": [
+      {
+        "title": {
+          "en": "Auto Rickshaw Fare Meter",
+          "hi": "ऑटो रिक्शा किराया मीटर"
+        },
+        "durationMinutes": 10,
+        "materials": {
+          "en": "Chalkboard calculation table",
+          "hi": "ब्लैकबोर्ड पर किराया सारणी"
+        },
+        "context": {
+          "en": "Auto rickshaw running rate of ₹15 per kilometer after flag-down",
+          "hi": "ऑटो रिक्शा का ₹15 प्रति किलोमीटर की दर से किराया"
+        },
+        "instructions": {
+          "en": [
+            "If 4 km trip costs ₹60, how much for 1 km? ₹60 ÷ 4 = ₹15/km (Unit rate).",
+            "Now calculate 7 km: 7 × ₹15 = ₹105.",
+            "Compare with speed: if car travels at 60 km/h, 1 hr = 60 km, 2.5 hrs = 150 km."
+          ],
+          "hi": [
+            "यदि 4 किमी का किराया ₹60 है, तो 1 किमी का कितना? ₹60 ÷ 4 = ₹15/किमी (इकाई दर)।",
+            "अब 7 किमी का किराया निकालें: 7 × ₹15 = ₹105।",
+            "गति से तुलना करें: 60 किमी/घंटा की गति से 2.5 घंटे में तय दूरी = 150 किमी।"
+          ]
+        },
+        "mathTakeaway": {
+          "en": "Direct proportion keeps the ratio y/x constant across all values.",
+          "hi": "सीधे समानुपात में दोनों राशियों का अनुपात (y/x) हमेशा स्थिर रहता है।"
+        }
+      }
+    ]
+  },
+  {
+    "conceptId": "percentages",
+    "conceptName": {
+      "en": "Percentages & Applications",
+      "hi": "प्रतिशत और उसके अनुप्रयोग"
+    },
+    "teachingTip": {
+      "en": "Anchor percentages to 10% (divide by 10) and 1% (divide by 100) to build fast mental math.",
+      "hi": "मानसिक गणना के लिए 10% (10 से भाग) और 1% (100 से भाग) को आधार बनाकर सिखाएं।"
+    },
+    "misconceptionNote": {
+      "en": "Adding percentages sequentially (e.g. 20% discount followed by 20% tax returns to original price).",
+      "hi": "प्रतिशतों को सीधे जोड़ना (जैसे 20% छूट के बाद 20% टैक्स लगाने पर वही मूल्य मानना)।"
+    },
+    "activities": [
+      {
+        "title": {
+          "en": "Diwali Sale Discount Hunter",
+          "hi": "दीवाली सेल छूट गणना"
+        },
+        "durationMinutes": 10,
+        "materials": {
+          "en": "Price tags drawn on chalkboard: ₹500, ₹800, ₹1200",
+          "hi": "ब्लैकबोर्ड पर मूल्य टैग: ₹500, ₹800, ₹1200"
+        },
+        "context": {
+          "en": "A clothing store offering flat 20% discount during festive sale",
+          "hi": "त्योहारी सीजन में कपड़ों की दुकान पर 20% की छूट"
+        },
+        "instructions": {
+          "en": [
+            "Kurta tag says ₹500. What is 10%? Cover the zero: ₹50.",
+            "20% is double of 10%: ₹50 × 2 = ₹100 discount.",
+            "Final price: ₹500 - ₹100 = ₹400. Repeat for ₹800 kurta (₹80 × 2 = ₹160 off, ₹640)."
+          ],
+          "hi": [
+            "कुर्ते का मूल्य ₹500 है। 10% कितना हुआ? अंतिम शून्य हटाएं: ₹50।",
+            "20% यानी 10% का दोगुना: ₹50 × 2 = ₹100 की छूट।",
+            "अंतिम मूल्य: ₹500 - ₹100 = ₹400। ₹800 के कुर्ते पर अभ्यास करें (10% = ₹80, 20% = ₹160 छूट, ₹640)।"
+          ]
+        },
+        "mathTakeaway": {
+          "en": "Percent means 'per hundred'. Benchmark percentages (10%, 25%, 50%) allow solving complex discounts quickly.",
+          "hi": "प्रतिशत का अर्थ है 'प्रति सौ'। 10% और 50% से बड़ी गणनाएं मौखिक हो जाती हैं।"
+        }
+      }
+    ]
+  },
+  {
+    "conceptId": "algebraic-expressions",
+    "conceptName": {
+      "en": "Algebraic Expressions & Like Terms",
+      "hi": "बीजीय व्यंजक और समान पद"
+    },
+    "teachingTip": {
+      "en": "Use fruit baskets: 3 mangoes + 2 apples cannot be simplified into 5 'mango-apples'.",
+      "hi": "फलों की टोकरी का उदाहरण दें: 3 आम + 2 सेब मिलकर 5 'आम-सेब' नहीं बन सकते।"
+    },
+    "misconceptionNote": {
+      "en": "Combining unlike terms (e.g. writing 3x + 4 = 7x or 2x + 3y = 5xy).",
+      "hi": "असमान पदों को जोड़ देना (जैसे 3x + 4 = 7x या 2x + 3y = 5xy लिख देना)।"
+    },
+    "activities": [
+      {
+        "title": {
+          "en": "Fruit Basket Inventory",
+          "hi": "फलों की टोकरी का हिसाब"
+        },
+        "durationMinutes": 10,
+        "materials": {
+          "en": "Chalk drawings: Mangoes (x), Bananas (y), and Rupee coins (constants)",
+          "hi": "ब्लैकबोर्ड पर चित्र: आम (x), केले (y), और सिक्के (अचर)"
+        },
+        "context": {
+          "en": "Taking inventory of mixed boxes at an APMC mandi fruit stall",
+          "hi": "फल मंडी में अलग-अलग पेटियों का हिसाब लगाना"
+        },
+        "instructions": {
+          "en": [
+            "Box 1 has 3 mangoes (3x) and ₹5. Box 2 has 2 mangoes (2x) and ₹10.",
+            "Ask: 'Combine both boxes. Can we add mangoes to rupees?' No! 3x + 2x = 5x, 5 + 10 = 15.",
+            "Total expression: 5x + 15. Show why it can never become 20x."
+          ],
+          "hi": [
+            "पेटी 1 में 3 आम (3x) और ₹5 हैं। पेटी 2 में 2 आम (2x) और ₹10 हैं।",
+            "पूछें: 'दोनों पेटियों को मिलाओ। क्या आम और रुपये जुड़ सकते हैं?' नहीं! 3x + 2x = 5x, 5 + 10 = 15।",
+            "कुल व्यंजक: 5x + 15। स्पष्ट करें कि यह 20x कभी नहीं हो सकता।"
+          ]
+        },
+        "mathTakeaway": {
+          "en": "Only like terms sharing the exact same variable factor can be combined.",
+          "hi": "केवल समान पद (समान चर वाले) ही आपस में जोड़े या घटाए जा सकते हैं।"
+        }
+      }
+    ]
+  },
+  {
+    "conceptId": "basic-equations",
+    "conceptName": {
+      "en": "Basic Linear Equations",
+      "hi": "सरल रैखिक समीकरण"
+    },
+    "teachingTip": {
+      "en": "Introduce the equal sign as a balance scale (weighing pan), not an 'answer comes next' operator.",
+      "hi": "बराबर (=) के चिह्न को तराजू के दोनों पलड़ों की तरह समझाएं, न कि सिर्फ उत्तर लिखने का संकेत।"
+    },
+    "misconceptionNote": {
+      "en": "Performing an operation on one side only (e.g. subtracting 5 from the left but forgetting the right).",
+      "hi": "समीकरण के केवल एक तरफ संक्रिया करना (उदा. बाईं ओर 5 घटाना लेकिन दाईं ओर भूल जाना)।"
+    },
+    "activities": [
+      {
+        "title": {
+          "en": "The Mystery Box on the Weighing Scale",
+          "hi": "तराजू पर रहस्यमयी डिब्बा"
+        },
+        "durationMinutes": 10,
+        "materials": {
+          "en": "Two hands outstretched acting as pan balances",
+          "hi": "दोनों हाथों को तराजू के पलड़ों की तरह फैलाकर अभिनय"
+        },
+        "context": {
+          "en": "Vegetable vendor balancing potatoes and weights on a classic beam balance",
+          "hi": "सब्जी मंडी में तराजू पर वजन संतुलित करना"
+        },
+        "instructions": {
+          "en": [
+            "Teacher holds hands flat: Left hand has 1 closed pencil box (x) + 3 chalk pieces. Right hand has 7 chalk pieces.",
+            "Both hands are level: x + 3 = 7.",
+            "Ask: 'To find what is inside the pencil box, how to isolate it?' Remove 3 chalks from BOTH hands simultaneously.",
+            "Left hand has only x. Right hand has 7 - 3 = 4 chalks. So x = 4."
+          ],
+          "hi": [
+            "शिक्षक दोनों हाथ फैलाते हैं: बाएं हाथ में पेंसिल बॉक्स (x) + 3 चाक। दाएं हाथ में 7 चाक।",
+            "दोनों हाथ संतुलित हैं: x + 3 = 7।",
+            "पूछें: 'पेंसिल बॉक्स का वजन जानने के लिए क्या करें?' दोनों हाथों से 3-3 चाक एक साथ हटाएं।",
+            "बाएं हाथ में सिर्फ x बचा, दाएं हाथ में 7 - 3 = 4 चाक बचे। अतः x = 4।"
+          ]
+        },
+        "mathTakeaway": {
+          "en": "Whatever operation you do to one side of an equation, you MUST do to the other to keep balance.",
+          "hi": "समीकरण के एक पक्ष में जो भी बदलाव करें, संतुलन बनाए रखने के लिए दूसरे पक्ष में भी वही करना आवश्यक है।"
+        }
+      }
+    ]
+  },
+  {
+    "conceptId": "balancing-equations",
+    "conceptName": {
+      "en": "Two-Step Equations",
+      "hi": "दो-चरणीय रैखिक समीकरण"
+    },
+    "teachingTip": {
+      "en": "Use the 'shoe and sock' metaphor for reverse order of operations: undo additions/subtractions before undoing multiplications.",
+      "hi": "'मोजा और जूता' का उदाहरण दें: उतारते समय पहले जूता (जोड़/घटाव) उतारा जाता है, फिर मोजा (गुणा/भाग)।"
+    },
+    "misconceptionNote": {
+      "en": "Sign errors when transposing terms: changing 2x + 6 = 14 into 2x = 14 + 6 instead of 14 - 6.",
+      "hi": "पक्षांतरण में चिह्न की गलती: 2x + 6 = 14 को 2x = 14 + 6 लिख देना।"
+    },
+    "activities": [
+      {
+        "title": {
+          "en": "Undoing the Magician's Number Trick",
+          "hi": "जादूगर की सोची गई संख्या का खुलासा"
+        },
+        "durationMinutes": 10,
+        "materials": {
+          "en": "Chalkboard flow diagram",
+          "hi": "ब्लैकबोर्ड पर तीर का प्रवाह चित्र"
+        },
+        "context": {
+          "en": "A student thinks of a secret number, doubles it, adds 5, and announces 17",
+          "hi": "छात्र एक संख्या सोचता है, उसे दोगुना करता है, 5 जोड़ता है और 17 बताता है"
+        },
+        "instructions": {
+          "en": [
+            "Forward process: x → multiply by 2 (2x) → add 5 (2x + 5 = 17).",
+            "Ask: 'How does the magician read your mind?' Reverse backwards!",
+            "First undo add 5: 17 - 5 = 12. Then undo multiply by 2: 12 ÷ 2 = 6. Secret number was 6!"
+          ],
+          "hi": [
+            "सीधी प्रक्रिया: x → 2 से गुणा (2x) → 5 जोड़ा (2x + 5 = 17)।",
+            "पूछें: 'जादूगर आपकी सोची संख्या कैसे बताता है?' उलटी दिशा में चलकर!",
+            "पहले +5 का उल्टा करें: 17 - 5 = 12। फिर ×2 का उल्टा करें: 12 ÷ 2 = 6। सोची गई संख्या 6 थी!"
+          ]
+        },
+        "mathTakeaway": {
+          "en": "Solving an equation is unwrapping the variable step-by-step in reverse BODMAS order.",
+          "hi": "समीकरण हल करना यानी BODMAS के उल्टे क्रम में चर को एक-एक करके मुक्त करना।"
+        }
+      }
+    ]
+  },
+  {
+    "conceptId": "exponents",
+    "conceptName": {
+      "en": "Exponents & Powers",
+      "hi": "घातांक और घात"
+    },
+    "teachingTip": {
+      "en": "Stress that exponent is repeated multiplication, while coefficient is repeated addition.",
+      "hi": "स्पष्ट करें कि घातांक बार-बार गुणा है, जबकि गुणांक बार-बार जोड़ है।"
+    },
+    "misconceptionNote": {
+      "en": "Multiplying base by exponent (e.g. 2^3 = 6 instead of 2 × 2 × 2 = 8).",
+      "hi": "आधार को घातांक से गुणा कर देना (जैसे 2^3 को 6 मानना, जबकि 2 × 2 × 2 = 8 होता है)।"
+    },
+    "activities": [
+      {
+        "title": {
+          "en": "The Chessboard Grain of Rice Legend",
+          "hi": "शतरंज के खाने और चावल का दाना"
+        },
+        "durationMinutes": 10,
+        "materials": {
+          "en": "1 sheet of paper folded repeatedly",
+          "hi": "1 कागज जिसे बार-बार आधा मोड़ा जाए"
+        },
+        "context": {
+          "en": "King offering sage 1 grain doubled on each square of a chessboard",
+          "hi": "राजा द्वारा शतरंज के हर अगले खाने में चावल दोगुना करने का किस्सा"
+        },
+        "instructions": {
+          "en": [
+            "Fold paper once: 2 layers (2^1 = 2).",
+            "Fold twice: 4 layers (2^2 = 4).",
+            "Fold 3 times: 8 layers (2^3 = 8). Ask: 'Did we do 2 × 3 = 6 or 2 × 2 × 2 = 8?'",
+            "Challenge students to fold it 7 times (2^7 = 128 layers). Impossible by hand!"
+          ],
+          "hi": [
+            "कागज को 1 बार मोड़ें: 2 परतें (2^1 = 2)।",
+            "2 बार मोड़ें: 4 परतें (2^2 = 4)।",
+            "3 बार मोड़ें: 8 परतें (2^3 = 8)। पूछें: 'क्या यह 2 × 3 = 6 है या 2 × 2 × 2 = 8?'",
+            "छात्रों को 7 बार मोड़ने की चुनौती दें (2^7 = 128 परतें)।"
+          ]
+        },
+        "mathTakeaway": {
+          "en": "Exponents represent exponential growth through compounding multiplication, not linear addition.",
+          "hi": "घातांक गुणन की तीव्र वृद्धि को दर्शाता है, साधारण जोड़ या गुणा को नहीं।"
+        }
+      }
+    ]
+  },
+  {
+    "conceptId": "linear-equations-distributive",
+    "conceptName": {
+      "en": "Equations with Brackets (Distributive Property)",
+      "hi": "कोष्ठक वाले रैखिक समीकरण (वितरण नियम)"
+    },
+    "teachingTip": {
+      "en": "Draw area rectangles or distribute sweets to every person sitting inside the classroom tent.",
+      "hi": "आयत का क्षेत्रफल बनाकर दिखाएं या कोष्ठक के अंदर बैठे हर सदस्य को मिठाई बांटने का उदाहरण दें।"
+    },
+    "misconceptionNote": {
+      "en": "Distributing to the first term only: 2(x + 3) = 2x + 3 (forgetting to multiply 2 × 3 = 6).",
+      "hi": "केवल पहले पद से गुणा करना: 2(x + 3) = 2x + 3 लिख देना (2 × 3 = 6 भूल जाना)।"
+    },
+    "activities": [
+      {
+        "title": {
+          "en": "Tiffin Box Combo Meal",
+          "hi": "टिफिन कॉम्बो भोजन पैकेट"
+        },
+        "durationMinutes": 10,
+        "materials": {
+          "en": "Chalkboard drawing of 2 meal packets",
+          "hi": "ब्लैकबोर्ड पर 2 लंच पैकेट का चित्र"
+        },
+        "context": {
+          "en": "Buying 2 identical lunch combo boxes: each box has 1 samosa (x) and 3 laddoos (3)",
+          "hi": "2 समान लंच बॉक्स खरीदना: प्रत्येक बॉक्स में 1 समोसा (x) और 3 लड्डू हैं"
+        },
+        "instructions": {
+          "en": [
+            "Write: 2 × (1 samosa + 3 laddoos) = 2(x + 3).",
+            "Open both boxes: How many samosas in total? 2 samosas (2x). How many laddoos? 6 laddoos (6).",
+            "Ask: 'If total bill is ₹26 and 1 samosa is x, solve 2x + 6 = 26.' 2x = 20 → x = ₹10 per samosa."
+          ],
+          "hi": [
+            "लिखें: 2 × (1 समोसा + 3 लड्डू) = 2(x + 3)।",
+            "दोनों डिब्बे खोलें: कुल कितने समोसे? 2 समोसे (2x)। कुल कितने लड्डू? 6 लड्डू (6)।",
+            "यदि कुल बिल ₹26 है, तो 2x + 6 = 26 हल करें: 2x = 20 → x = ₹10 प्रति समोसा।"
+          ]
+        },
+        "mathTakeaway": {
+          "en": "The multiplier outside the bracket must touch every single member inside the bracket.",
+          "hi": "कोष्ठक के बाहर की संख्या अंदर के प्रत्येक पद से अनिवार्य रूप से गुणा होती है।"
+        }
+      }
+    ]
+  },
+  {
+    "conceptId": "equations-both-sides",
+    "conceptName": {
+      "en": "Variables on Both Sides",
+      "hi": "दोनों पक्षों में चर वाले समीकरण"
+    },
+    "teachingTip": {
+      "en": "Eliminate the smaller variable term first from both sides before touching the constants.",
+      "hi": "अचर पदों को छेड़ने से पहले हमेशा छोटे चर वाले पद को दोनों पक्षों से घटाएं।"
+    },
+    "misconceptionNote": {
+      "en": "Adding variable terms across the equals sign instead of subtracting (e.g. 5x - 2 = 2x + 7 leading to 7x).",
+      "hi": "बराबर के पार चर को जोड़ देना (जैसे 5x - 2 = 2x + 7 में 5x और 2x को जोड़कर 7x बना देना)।"
+    },
+    "activities": [
+      {
+        "title": {
+          "en": "Tug of War on the Equation Line",
+          "hi": "समीकरण रेखा पर रस्साकशी"
+        },
+        "durationMinutes": 10,
+        "materials": {
+          "en": "Chalk balance on floor",
+          "hi": "फर्श पर चाक से बना संतुलन"
+        },
+        "context": {
+          "en": "Two teams on a seesaw with weights and students",
+          "hi": "सी-सॉ झूले के दोनों ओर बच्चे और वजन"
+        },
+        "instructions": {
+          "en": [
+            "Left side: 5 mystery boxes (5x) and a 4 kg weight. Right side: 2 mystery boxes (2x) and a 16 kg weight.",
+            "Equation: 5x + 4 = 2x + 16.",
+            "Step 1: Remove 2 mystery boxes from BOTH sides: 3x + 4 = 16.",
+            "Step 2: Remove 4 kg from BOTH sides: 3x = 12 → x = 4 kg."
+          ],
+          "hi": [
+            "बाईं ओर: 5 रहस्यमयी डिब्बे (5x) और 4 किग्रा वजन। दाईं ओर: 2 डिब्बे (2x) और 16 किग्रा वजन।",
+            "समीकरण: 5x + 4 = 2x + 16।",
+            "चरण 1: दोनों पक्षों से 2-2 डिब्बे हटाएं: 3x + 4 = 16।",
+            "चरण 2: दोनों पक्षों से 4 किग्रा हटाएं: 3x = 12 → x = 4 किग्रा।"
+          ]
+        },
+        "mathTakeaway": {
+          "en": "Variables on both sides are cleared by subtracting the smaller variable quantity from both pans.",
+          "hi": "दोनों पक्षों से छोटे चर वाले पद को घटाने पर समीकरण सरल दो-चरणीय रूप में बदल जाता है।"
+        }
+      }
+    ]
+  },
+  {
+    "conceptId": "linear-equations-two-vars",
+    "conceptName": {
+      "en": "Linear Equations in Two Variables",
+      "hi": "दो चरों वाले रैखिक समीकरण"
+    },
+    "teachingTip": {
+      "en": "Show that a single equation in two variables has infinitely many ordered pair solutions (x, y).",
+      "hi": "दिखाएं कि दो चरों वाले एक अकेले समीकरण के अनंत हल (x, y) होते हैं।"
+    },
+    "misconceptionNote": {
+      "en": "Assuming there is only one single numerical answer to an equation like x + y = 10.",
+      "hi": "यह मानना कि x + y = 10 का केवल एक ही निश्चित उत्तर हो सकता है।"
+    },
+    "activities": [
+      {
+        "title": {
+          "en": "Cricket Partnership Runs",
+          "hi": "क्रिकेट साझेदारी के रन"
+        },
+        "durationMinutes": 10,
+        "materials": {
+          "en": "Chalkboard scoreboard table",
+          "hi": "ब्लैकबोर्ड पर स्कोरबोर्ड सारणी"
+        },
+        "context": {
+          "en": "Virat and Rohit made an unbroken partnership of 100 runs: x + y = 100",
+          "hi": "विराट और रोहित ने मिलकर नाबाद 100 रनों की साझेदारी की: x + y = 100"
+        },
+        "instructions": {
+          "en": [
+            "Ask 5 students: 'What could their individual scores be?'",
+            "Collect pairs: (50, 50), (70, 30), (99, 1), (0, 100), (45, 55).",
+            "Plot these points roughly on the board to reveal they all lie on a straight line!"
+          ],
+          "hi": [
+            "5 छात्रों से पूछें: 'दोनों के व्यक्तिगत रन क्या हो सकते हैं?'",
+            "जोड़े लिखें: (50, 50), (70, 30), (99, 1), (0, 100), (45, 55)।",
+            "इन सभी बिंदुओं को बोर्ड पर मिलाएं: वे सभी एक सीधी रेखा पर आते हैं!"
+          ]
+        },
+        "mathTakeaway": {
+          "en": "Every point (x, y) on the line satisfies the equation, proving infinite possible solutions.",
+          "hi": "उस रेखा पर स्थित प्रत्येक बिंदु (x, y) उस समीकरण का एक वैध हल है।"
+        }
+      }
+    ]
+  },
+  {
+    "conceptId": "coordinate-geometry",
+    "conceptName": {
+      "en": "Coordinate Geometry Basics",
+      "hi": "निर्देशांक ज्यामिति की मूल बातें"
+    },
+    "teachingTip": {
+      "en": "Teach (x, y) as 'walk along the street first (x), then climb the elevator (y)'.",
+      "hi": "(x, y) को याद रखने का तरीका: 'पहले सड़क पर चलो (x), फिर लिफ्ट से ऊपर चढ़ो (y)'।"
+    },
+    "misconceptionNote": {
+      "en": "Reversing coordinates: plotting (2, 5) as 2 units up and 5 units right.",
+      "hi": "निर्देशांकों को उल्टा पढ़ना: (2, 5) को 2 ऊपर और 5 दाएं पढ़ लेना।"
+    },
+    "activities": [
+      {
+        "title": {
+          "en": "Cinema Hall Seat Finder",
+          "hi": "सिनेमा हॉल सीट खोज"
+        },
+        "durationMinutes": 10,
+        "materials": {
+          "en": "Classroom floor tile grid labelled with chalk axes",
+          "hi": "कक्षा के फर्श की टाइलों पर चाक से बने X और Y अक्ष"
+        },
+        "context": {
+          "en": "Finding ticket seat Row and Column at a movie theatre",
+          "hi": "सिनेमा हॉल में टिकट की पंक्ति और कॉलम की सीट ढूंढना"
+        },
+        "instructions": {
+          "en": [
+            "Label Origin (0,0) at the classroom door.",
+            "Hand a student a ticket: (3, 4).",
+            "Student must start at (0,0), walk 3 tiles East along X-axis, then 4 tiles North along Y-axis.",
+            "Compare with ticket (4, 3) to physically see they land on completely different desks."
+          ],
+          "hi": [
+            "कक्षा के मुख्य द्वार को मूल बिंदु (0,0) मानें।",
+            "छात्र को टिकट दें: (3, 4)।",
+            "छात्र (0,0) से 3 टाइल पूर्व (X-अक्ष) चलेगा, फिर 4 टाइल उत्तर (Y-अक्ष) चलेगा।",
+            "(4, 3) से तुलना करें ताकि दिखे कि दोनों सीटें पूरी तरह अलग हैं।"
+          ]
+        },
+        "mathTakeaway": {
+          "en": "Order matters in ordered pairs: (x, y) is never interchangeable with (y, x) unless x = y.",
+          "hi": "क्रमित युग्म में क्रम महत्वपूर्ण है: (x, y) और (y, x) समान नहीं होते जब तक कि x = y न हो।"
+        }
+      }
+    ]
+  },
+  {
+    "conceptId": "graphing-linear-equations",
+    "conceptName": {
+      "en": "Graphing Linear Equations",
+      "hi": "रैखिक समीकरणों का आलेखन"
+    },
+    "teachingTip": {
+      "en": "Always plot at least 3 points: the third point acts as an error detector if the line is not straight.",
+      "hi": "हमेशा कम से कम 3 बिंदु आलेखित करें: तीसरा बिंदु जांच करता है कि रेखा सीधी बन रही है या नहीं।"
+    },
+    "misconceptionNote": {
+      "en": "Thinking a line stops at the plotted points rather than extending infinitely in both directions.",
+      "hi": "यह सोचना कि रेखा केवल गिने गए बिंदुओं तक ही सीमित है, अनंत तक नहीं।"
+    },
+    "activities": [
+      {
+        "title": {
+          "en": "Stretching the Elastic Rope",
+          "hi": "खिंची हुई सीधी रस्सी का खेल"
+        },
+        "durationMinutes": 10,
+        "materials": {
+          "en": "Piece of string or chalk on blackboard grid",
+          "hi": "ब्लैकबोर्ड ग्रिड और एक सीधी डोरी"
+        },
+        "context": {
+          "en": "Aligning fence posts in a straight line for a farm boundary",
+          "hi": "खेत की मेड़ पर बाड़ के खंभों को एक सीध में लगाना"
+        },
+        "instructions": {
+          "en": [
+            "Equation: y = 2x + 1.",
+            "Calculate 3 points: x = 0 → (0, 1); x = 1 → (1, 3); x = 2 → (2, 5).",
+            "Have 3 students place their fingers on these points on the board grid.",
+            "Stretch string across all 3: they align in an exact straight line. Any point on string satisfies y = 2x + 1."
+          ],
+          "hi": [
+            "समीकरण: y = 2x + 1।",
+            "3 बिंदु निकालें: x = 0 → (0, 1); x = 1 → (1, 3); x = 2 → (2, 5)।",
+            "3 छात्र बोर्ड ग्रिड पर इन बिंदुओं पर उंगली रखते हैं।",
+            "एक डोरी खींचकर देखें: तीनों बिंदु एकदम सीधी रेखा में हैं।"
+          ]
+        },
+        "mathTakeaway": {
+          "en": "The degree 1 algebraic equation y = mx + c always forms a continuous straight line geometrically.",
+          "hi": "एक घात वाला रैखिक समीकरण y = mx + c ज्यामितीय रूप से हमेशा एक सरल रेखा बनाता है।"
+        }
+      }
+    ]
+  },
+  {
+    "conceptId": "polynomials-intro",
+    "conceptName": {
+      "en": "Polynomials & Zeroes",
+      "hi": "बहुपद और उनके शून्यक"
+    },
+    "teachingTip": {
+      "en": "Define a 'zero' as the input x that makes the polynomial output evaluate to zero.",
+      "hi": "'शून्यक' को उस इनपुट मान x के रूप में समझाएं जिस पर बहुपद का कुल मान 0 हो जाता है।"
+    },
+    "misconceptionNote": {
+      "en": "Confusing the number 0 itself with the 'zero of a polynomial' (e.g. thinking zero of p(x) = x - 5 is 0).",
+      "hi": "संख्या 0 और बहुपद के 'शून्यक' में भ्रम (उदा. p(x) = x - 5 का शून्यक 0 मान लेना)।"
+    },
+    "activities": [
+      {
+        "title": {
+          "en": "The Ground-Landing Rocket",
+          "hi": "जमीन पर उतरता रॉकेट"
+        },
+        "durationMinutes": 10,
+        "materials": {
+          "en": "Chalkboard curve drawing",
+          "hi": "ब्लैकबोर्ड पर वक्र रेखा"
+        },
+        "context": {
+          "en": "A toy rocket height polynomial h(t) = 6 - 2t, where h is height above ground",
+          "hi": "खिलौना रॉकेट की जमीन से ऊंचाई h(t) = 6 - 2t"
+        },
+        "instructions": {
+          "en": [
+            "At t = 0 sec, height = 6 - 0 = 6 meters.",
+            "At t = 1 sec, height = 6 - 2(1) = 4 meters.",
+            "Ask: 'At what time does the rocket touch the ground (height = 0)?'",
+            "Set 6 - 2t = 0 → 2t = 6 → t = 3 seconds. The zero of the polynomial is t = 3!"
+          ],
+          "hi": [
+            "t = 0 सेकंड पर ऊंचाई = 6 - 0 = 6 मीटर।",
+            "t = 1 सेकंड पर ऊंचाई = 6 - 2 = 4 मीटर।",
+            "पूछें: 'रॉकेट किस समय जमीन को छुएगा (ऊंचाई = 0)?'",
+            "6 - 2t = 0 → 2t = 6 → t = 3 सेकंड। इस बहुपद का शून्यक t = 3 है!"
+          ]
+        },
+        "mathTakeaway": {
+          "en": "Zeroes are the X-intercepts where the graph crosses the ground line (y = 0).",
+          "hi": "शून्यक वे बिंदु हैं जहां आलेख X-अक्ष (y = 0) को काटता है।"
+        }
+      }
+    ]
+  },
+  {
+    "conceptId": "quadratic-equations-intro",
+    "conceptName": {
+      "en": "Quadratic Equations Intro",
+      "hi": "द्विघात समीकरण परिचय"
+    },
+    "teachingTip": {
+      "en": "Show why x^2 = 16 has TWO solutions (+4 and -4) using area of square and integer signs.",
+      "hi": "वर्ग के क्षेत्रफल और पूर्णांक चिह्नों से दिखाएं कि x^2 = 16 के दो हल (+4 और -4) क्यों होते हैं।"
+    },
+    "misconceptionNote": {
+      "en": "Forgetting the negative root when taking square roots (e.g. stating x^2 = 25 has only solution x = 5).",
+      "hi": "वर्गमूल लेते समय ऋणात्मक मूल भूल जाना (जैसे x^2 = 25 का केवल x = 5 उत्तर देना)।"
+    },
+    "activities": [
+      {
+        "title": {
+          "en": "The Square Rangoli Courtyard",
+          "hi": "चौकोर रंगोली का आंगन"
+        },
+        "durationMinutes": 10,
+        "materials": {
+          "en": "Chalkboard square illustration",
+          "hi": "ब्लैकबोर्ड पर वर्ग का चित्र"
+        },
+        "context": {
+          "en": "Designing a square Rangoli carpet of total area 36 sq ft",
+          "hi": "36 वर्ग फीट क्षेत्रफल वाली चौकोर रंगोली का निर्माण"
+        },
+        "instructions": {
+          "en": [
+            "Area of square = x^2 = 36. What is side length x? 6 ft.",
+            "Now ask algebraically: 'What number squared gives 36?'",
+            "Show (+6)^2 = 36 AND (-6)^2 = (-6) × (-6) = +36. Both are valid mathematical roots!",
+            "Explain: In geometry side length is positive (+6), but algebraically x = ±6."
+          ],
+          "hi": [
+            "वर्ग का क्षेत्रफल = x^2 = 36। भुजा x कितनी होगी? 6 फीट।",
+            "अब बीजगणितीय रूप से पूछें: 'किस संख्या का वर्ग 36 होता है?'",
+            "(+6)^2 = 36 और (-6)^2 = +36 दोनों होते हैं! दोनों मूल मान्य हैं।",
+            "समझाएं: ज्यामिति में भुजा धनात्मक (+6) होती है, पर बीजगणित में दो मूल (±6) होते हैं।"
+          ]
+        },
+        "mathTakeaway": {
+          "en": "A quadratic equation (degree 2) has at most two roots because both positive and negative values square to positive.",
+          "hi": "द्विघात समीकरण के अधिकतम दो मूल होते हैं क्योंकि धनात्मक और ऋणात्मक दोनों का वर्ग धनात्मक होता है।"
+        }
+      }
+    ]
+  },
+  {
+    "conceptId": "pair-linear-equations",
+    "conceptName": {
+      "en": "Pairs of Linear Equations",
+      "hi": "दो चरों वाले रैखिक समीकरण युग्म"
+    },
+    "teachingTip": {
+      "en": "Explain simultaneous equations as finding the single shared point where two crossing paths meet.",
+      "hi": "समीकरण युग्म को दो रास्तों के कटान बिंदु (चौराहा) के रूप में समझाएं।"
+    },
+    "misconceptionNote": {
+      "en": "Thinking any two equations always have a unique solution, ignoring parallel lines (inconsistent) and coincident lines.",
+      "hi": "यह मानना कि हर दो समीकरणों का हमेशा एक हल होगा, समांतर रेखाओं (कोई हल नहीं) को नजरअंदाज करना।"
+    },
+    "activities": [
+      {
+        "title": {
+          "en": "Train Track Crossing Intersection",
+          "hi": "रेलवे क्रॉसिंग का संगम बिंदु"
+        },
+        "durationMinutes": 10,
+        "materials": {
+          "en": "Two straight meter rulers or sticks",
+          "hi": "दो सीधी लकड़ियां या मीटर स्केल"
+        },
+        "context": {
+          "en": "Finding the junction point where two straight rail lines intersect",
+          "hi": "दो सीधी रेल पटरियों के मिलने का जंक्शन बिंदु खोजना"
+        },
+        "instructions": {
+          "en": [
+            "Hold two rulers crossing each other: they intersect at exactly ONE single point (unique solution).",
+            "Hold two rulers parallel: they NEVER intersect (parallel tracks, zero solutions).",
+            "Lay one ruler directly on top of the other: they touch everywhere (infinitely many solutions).",
+            "Connect each physical position to the algebraic conditions: a1/a2 ≠ b1/b2, etc."
+          ],
+          "hi": [
+            "दो स्केल को एक-दूसरे के ऊपर क्रॉस करके पकड़ें: वे ठीक 1 बिंदु पर काटते हैं (अद्वितीय हल)।",
+            "दो स्केल को समानांतर पकड़ें: वे कभी नहीं मिलते (समांतर रेखाएं, कोई हल नहीं)।",
+            "एक स्केल को दूसरे के ठीक ऊपर रखें: वे हर जगह मिलते हैं (अनंत हल)।",
+            "प्रत्येक स्थिति को बीजगणितीय अनुपात a1/a2 ≠ b1/b2 से जोड़कर दिखाएं।"
+          ]
+        },
+        "mathTakeaway": {
+          "en": "Solving a linear system is finding the geometric intersection of two straight lines on a plane.",
+          "hi": "समीकरण युग्म को हल करना तल पर दो रेखाओं का ज्यामितीय प्रतिच्छेद बिंदु ज्ञात करना है।"
+        }
+      }
+    ]
+  }
+]

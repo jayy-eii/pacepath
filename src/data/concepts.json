@@ -1,0 +1,288 @@
+[
+  {
+    "id": "whole-numbers",
+    "name": {
+      "en": "Whole Numbers & Operations",
+      "hi": "पूर्ण संख्याएं और संक्रियाएं"
+    },
+    "grade": 6,
+    "prerequisites": [],
+    "description": {
+      "en": "Fundamental operations (+, -, ×, ÷) with whole numbers and practical word problems.",
+      "hi": "पूर्ण संख्याओं के साथ बुनियादी संक्रियाएं (+, -, ×, ÷) और व्यावहारिक शब्द समस्याएं।"
+    }
+  },
+  {
+    "id": "factors-multiples",
+    "name": {
+      "en": "Factors, Multiples & Primes",
+      "hi": "गुणनखंड, गुणज और अभाज्य"
+    },
+    "grade": 6,
+    "prerequisites": ["whole-numbers"],
+    "description": {
+      "en": "Divisibility tests, prime numbers, prime factorisation, HCF, and LCM.",
+      "hi": "विभाज्यता नियम, अभाज्य संख्याएं, अभाज्य गुणनखंडन, म.स.प. (HCF) और ल.स.प. (LCM)।"
+    }
+  },
+  {
+    "id": "fractions-basics",
+    "name": {
+      "en": "Fractions Basics & Equivalence",
+      "hi": "भिन्न की समझ और तुल्य भिन्न"
+    },
+    "grade": 6,
+    "prerequisites": ["factors-multiples"],
+    "description": {
+      "en": "Numerator, denominator, proper/improper fractions, equivalent fractions, and simplest form.",
+      "hi": "अंश, हर, उचित/अनुचित भिन्न, तुल्य भिन्न और सरलतम रूप।"
+    }
+  },
+  {
+    "id": "fractions-add",
+    "name": {
+      "en": "Fractions: Add & Subtract",
+      "hi": "भिन्न: जोड़ और घटाव"
+    },
+    "grade": 6,
+    "prerequisites": ["fractions-basics"],
+    "description": {
+      "en": "Adding and subtracting fractions with like and unlike denominators using LCM.",
+      "hi": "समान और असमान हर वाले भिन्नों को LCM द्वारा जोड़ना और घटाना।"
+    }
+  },
+  {
+    "id": "decimals",
+    "name": {
+      "en": "Decimal Operations",
+      "hi": "दशमलव संक्रियाएं"
+    },
+    "grade": 6,
+    "prerequisites": ["fractions-basics"],
+    "description": {
+      "en": "Place value, tenths, hundredths, decimal addition, subtraction, and multiplication.",
+      "hi": "स्थानिक मान, दशांश, शतांश, दशमलव जोड़, घटाव और गुणा।"
+    }
+  },
+  {
+    "id": "ratios",
+    "name": {
+      "en": "Ratio & Comparison",
+      "hi": "अनुपात और तुलना"
+    },
+    "grade": 6,
+    "prerequisites": ["fractions-basics"],
+    "description": {
+      "en": "Comparing two quantities of the same unit using division and ratios in simplest form.",
+      "hi": "समान इकाई की दो राशियों की तुलना और अनुपात का सरलतम रूप।"
+    }
+  },
+  {
+    "id": "integers",
+    "name": {
+      "en": "Integers & Sign Rules",
+      "hi": "पूर्णांक और चिह्न नियम"
+    },
+    "grade": 7,
+    "prerequisites": ["whole-numbers"],
+    "description": {
+      "en": "Positive and negative numbers, number line representation, and signs rules for addition/subtraction/multiplication.",
+      "hi": "धनात्मक और ऋणात्मक संख्याएं, संख्या रेखा, और जोड़/घटाव/गुणा के चिह्न नियम।"
+    }
+  },
+  {
+    "id": "fractions-mult-div",
+    "name": {
+      "en": "Fractions: Multiply & Divide",
+      "hi": "भिन्न: गुणा और भाग"
+    },
+    "grade": 7,
+    "prerequisites": ["fractions-add"],
+    "description": {
+      "en": "Multiplication of fractions, finding reciprocals, and dividing fractions.",
+      "hi": "भिन्नों का गुणन, व्युत्क्रम (reciprocal) ज्ञात करना और भिन्नों का भाग।"
+    }
+  },
+  {
+    "id": "proportions",
+    "name": {
+      "en": "Proportions & Unitary Method",
+      "hi": "समानुपात और ऐकिक नियम"
+    },
+    "grade": 7,
+    "prerequisites": ["ratios"],
+    "description": {
+      "en": "Equality of ratios (a:b = c:d), cross-multiplication, and solving real-world unitary problems.",
+      "hi": "अनुपातों की समानता (a:b = c:d), तिर्यक गुणन (cross-product) और ऐकिक नियम।"
+    }
+  },
+  {
+    "id": "percentages",
+    "name": {
+      "en": "Percentages & Applications",
+      "hi": "प्रतिशत और अनुप्रयोग"
+    },
+    "grade": 7,
+    "prerequisites": ["proportions", "decimals"],
+    "description": {
+      "en": "Converting between fractions, decimals, and percentages; calculating percentages of quantities.",
+      "hi": "भिन्न, दशमलव और प्रतिशत का परस्पर रूपांतरण; राशियों का प्रतिशत ज्ञात करना।"
+    }
+  },
+  {
+    "id": "algebraic-expressions",
+    "name": {
+      "en": "Algebraic Expressions",
+      "hi": "बीजीय व्यंजक"
+    },
+    "grade": 7,
+    "prerequisites": ["integers"],
+    "description": {
+      "en": "Variables, constants, algebraic terms, coefficients, and combining like and unlike terms.",
+      "hi": "चर, अचर, पद, गुणांक और समान व असमान पदों का संयोजन।"
+    }
+  },
+  {
+    "id": "basic-equations",
+    "name": {
+      "en": "Basic Linear Equations",
+      "hi": "सरल रैखिक समीकरण"
+    },
+    "grade": 7,
+    "prerequisites": ["algebraic-expressions", "integers"],
+    "description": {
+      "en": "Solving simple one-step linear equations: x + a = b and ax = b by balancing.",
+      "hi": "सरल एक-चरणीय रैखिक समीकरण हल करना: x + a = b और ax = b।"
+    }
+  },
+  {
+    "id": "balancing-equations",
+    "name": {
+      "en": "Two-Step Equations",
+      "hi": "दो-चरणीय समीकरण"
+    },
+    "grade": 8,
+    "prerequisites": ["basic-equations", "integers"],
+    "description": {
+      "en": "Solving two-step linear equations: ax + b = c using systematic inverse operations.",
+      "hi": "दो-चरणीय रैखिक समीकरण हल करना: ax + b = c प्रतिलोम संक्रियाओं द्वारा।"
+    }
+  },
+  {
+    "id": "exponents",
+    "name": {
+      "en": "Exponents & Powers",
+      "hi": "घातांक और घात"
+    },
+    "grade": 8,
+    "prerequisites": ["whole-numbers", "integers"],
+    "description": {
+      "en": "Base, power, laws of exponents (product, quotient, power of power), and negative exponents.",
+      "hi": "आधार, घातांक, घातांकों के नियम (गुणन, भाग, घात की घात) और ऋणात्मक घातांक।"
+    }
+  },
+  {
+    "id": "linear-equations-distributive",
+    "name": {
+      "en": "Equations with Brackets",
+      "hi": "कोष्ठक वाले रैखिक समीकरण"
+    },
+    "grade": 8,
+    "prerequisites": ["balancing-equations", "algebraic-expressions"],
+    "description": {
+      "en": "Solving linear equations involving the distributive property: a(x + b) = c.",
+      "hi": "वितरण गुणधर्म (distributive property) वाले समीकरण हल करना: a(x + b) = c।"
+    }
+  },
+  {
+    "id": "equations-both-sides",
+    "name": {
+      "en": "Variables on Both Sides",
+      "hi": "दोनों पक्षों में चर वाले समीकरण"
+    },
+    "grade": 9,
+    "prerequisites": ["balancing-equations", "linear-equations-distributive"],
+    "description": {
+      "en": "Transposing variables and constants to solve equations of the form ax + b = cx + d.",
+      "hi": "ax + b = cx + d रूप के समीकरणों में चरों और अचरों का पक्षांतरण करके हल करना।"
+    }
+  },
+  {
+    "id": "linear-equations-two-vars",
+    "name": {
+      "en": "Linear Equations in Two Variables",
+      "hi": "दो चरों वाले रैखिक समीकरण"
+    },
+    "grade": 9,
+    "prerequisites": ["equations-both-sides"],
+    "description": {
+      "en": "General form ax + by + c = 0, finding ordered pair solutions (x, y), and geometric representation.",
+      "hi": "व्यापक रूप ax + by + c = 0, क्रमित युग्म हल (x, y) ज्ञात करना।"
+    }
+  },
+  {
+    "id": "coordinate-geometry",
+    "name": {
+      "en": "Coordinate Geometry Basics",
+      "hi": "निर्देशांक ज्यामिति मूल बातें"
+    },
+    "grade": 9,
+    "prerequisites": ["integers"],
+    "description": {
+      "en": "Cartesian plane, x-axis, y-axis, origin, coordinates (x, y), and identifying quadrants.",
+      "hi": "कार्तीय तल, x-अक्ष, y-अक्ष, मूल बिंदु, निर्देशांक (x, y) और चतुर्थांशों की पहचान।"
+    }
+  },
+  {
+    "id": "graphing-linear-equations",
+    "name": {
+      "en": "Graphing Linear Equations",
+      "hi": "रैखिक समीकरणों का आलेख"
+    },
+    "grade": 9,
+    "prerequisites": ["linear-equations-two-vars", "coordinate-geometry"],
+    "description": {
+      "en": "Plotting table of values on Cartesian plane, drawing straight line graphs, and interpreting intercepts.",
+      "hi": "कार्तीय तल पर मानों की तालिका बनाना, सरल रेखा आलेख खींचना और अंतःखंड समझना।"
+    }
+  },
+  {
+    "id": "polynomials-intro",
+    "name": {
+      "en": "Polynomials & Zeroes",
+      "hi": "बहुपद और उनके शून्यक"
+    },
+    "grade": 9,
+    "prerequisites": ["algebraic-expressions"],
+    "description": {
+      "en": "Classification by degree (linear, quadratic), finding zeroes of linear polynomials p(x) = ax + b.",
+      "hi": "घात के आधार पर वर्गीकरण, रैखिक बहुपदों p(x) = ax + b के शून्यक ज्ञात करना।"
+    }
+  },
+  {
+    "id": "quadratic-equations-intro",
+    "name": {
+      "en": "Quadratic Equations Intro",
+      "hi": "द्विघात समीकरण परिचय"
+    },
+    "grade": 10,
+    "prerequisites": ["equations-both-sides", "exponents", "polynomials-intro"],
+    "description": {
+      "en": "Standard form ax² + bx + c = 0 (a ≠ 0), identifying quadratic equations, and solving by factorisation.",
+      "hi": "मानक रूप ax² + bx + c = 0 (a ≠ 0), द्विघात समीकरणों की पहचान और गुणनखंडन विधि से हल।"
+    }
+  },
+  {
+    "id": "pair-linear-equations",
+    "name": {
+      "en": "Pairs of Linear Equations",
+      "hi": "रैखिक समीकरण युग्म"
+    },
+    "grade": 10,
+    "prerequisites": ["linear-equations-two-vars"],
+    "description": {
+      "en": "Solving simultaneous linear equations in two variables algebraically using substitution and elimination.",
+      "hi": "दो चरों में युगपत रैखिक समीकरणों को प्रतिस्थापन और विलोपन विधियों से हल करना।"
+    }
+  }
+]

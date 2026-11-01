@@ -47,6 +47,7 @@ import { DetectiveModal } from '../components/solve/DetectiveModal'
 import { MisconceptionDetectiveModal } from '../components/solve/MisconceptionDetectiveModal'
 import { TestSessionView } from '../components/solve/TestSessionView'
 import { AskTeacherModal } from '../components/solve/AskTeacherModal'
+import { AiTutorChat } from '../components/solve/AiTutorChat'
 import { getStudentSession, switchRoleOrLogout } from '../services/roleSession'
 import {
   getClassInfo,
@@ -95,8 +96,16 @@ export function StudentWorkspacePage({ lang, onToggleLang }: StudentWorkspacePag
     if (pathname.includes('/tests')) return 'tests'
     if (pathname.includes('/doubts')) return 'doubts'
     if (pathname.includes('/gaps')) return 'gaps'
+    if (pathname.includes('/tutor')) return 'tutor'
     return 'home'
   }, [pathname])
+
+  const [aiTutorContext, setAiTutorContext] = useState<{
+    questionId?: string
+    questionTitle?: string
+    studentAnswer?: string
+    conceptId?: string
+  } | null>(null)
 
   const [step, setStep] = useState<SolveStep>('loading')
   const [student, setStudent] = useState<Student | null>(null)
@@ -554,6 +563,14 @@ export function StudentWorkspacePage({ lang, onToggleLang }: StudentWorkspacePag
         </button>
         <button
           type="button"
+          className={`tab-btn ${currentSubpage === 'tutor' ? 'active' : ''}`}
+          onClick={() => navigate('/student/tutor')}
+        >
+          <span>🤖</span>
+          <span>{lang === 'hi' ? 'एआई ट्यूटर' : 'AI Tutor'}</span>
+        </button>
+        <button
+          type="button"
           className={`tab-btn ${currentSubpage === 'gaps' ? 'active' : ''}`}
           onClick={() => navigate('/student/gaps')}
         >
@@ -607,6 +624,10 @@ export function StudentWorkspacePage({ lang, onToggleLang }: StudentWorkspacePag
                     setIsAskTeacherModalOpen(true)
                   }
                 }}
+                onAskAITutor={(ctx) => {
+                  setAiTutorContext(ctx)
+                  navigate('/student/tutor')
+                }}
                 onNext={handleNextQuestion}
                 isLast={currentIndex + 1 === SESSION_TARGET_QUESTIONS}
               />
@@ -628,6 +649,10 @@ export function StudentWorkspacePage({ lang, onToggleLang }: StudentWorkspacePag
                     setAskTeacherContext(ctx)
                     setIsAskTeacherModalOpen(true)
                   }
+                }}
+                onAskAITutor={(ctx) => {
+                  setAiTutorContext(ctx)
+                  navigate('/student/tutor')
                 }}
               />
             </div>
@@ -896,6 +921,20 @@ export function StudentWorkspacePage({ lang, onToggleLang }: StudentWorkspacePag
             </div>
           )}
 
+          {/* Subpage: AI Study Tutor */}
+          {currentSubpage === 'tutor' && student && (
+            <div className="student-tutor-subpage-view" key="tutor-subpage">
+              <AiTutorChat
+                classCode={student.classCode || 'DEMO'}
+                studentId={student.id}
+                lang={lang}
+                attachedContext={aiTutorContext || undefined}
+                onClearAttachedContext={() => setAiTutorContext(null)}
+                onBack={() => navigate('/student')}
+              />
+            </div>
+          )}
+
           {/* Subpage: Student Home Overview */}
           {currentSubpage === 'home' && step === 'ready' && (
             <div className="student-home-view" key="home-view">
@@ -919,6 +958,35 @@ export function StudentWorkspacePage({ lang, onToggleLang }: StudentWorkspacePag
                   </button>
                 </div>
                 <Mascot size={110} mood="wave" />
+              </div>
+
+              {/* AI Tutor Card */}
+              <div className="ai-tutor-home-card">
+                <div className="tutor-card-mascot">🤖</div>
+                <div className="tutor-card-body">
+                  <h4>{lang === 'hi' ? 'पेसपाथ एआई ट्यूटर (टेक्स्ट + फ़ोटो)' : 'PacePath AI Study Tutor (Text + Photo)'}</h4>
+                  <p>
+                    {lang === 'hi'
+                      ? 'गणित में कहीं अटके हैं? प्रश्न पूछें या किताब/नोटबुक की फ़ोटो खींचें। सुरक्षित, चरण-दर-चरण संकेत पाएँ!'
+                      : 'Stuck on a tricky math problem? Type your question or snap a photo of your notebook for step-by-step guidance.'}
+                  </p>
+                  <div className="tutor-card-actions">
+                    <button
+                      type="button"
+                      className="btn btn-primary btn-sm"
+                      onClick={() => navigate('/student/tutor')}
+                    >
+                      💬 {lang === 'hi' ? 'ट्यूटर से पूछें' : 'Ask Question'}
+                    </button>
+                    <button
+                      type="button"
+                      className="btn btn-secondary btn-sm"
+                      onClick={() => navigate('/student/tutor')}
+                    >
+                      📷 {lang === 'hi' ? 'फ़ोटो प्रश्न' : 'Photo Problem'}
+                    </button>
+                  </div>
+                </div>
               </div>
 
               {/* Mastery Snapshot Grid */}
@@ -972,6 +1040,15 @@ export function StudentWorkspacePage({ lang, onToggleLang }: StudentWorkspacePag
         >
           <span className="tab-icon">⚡</span>
           <span className="tab-text">Practice</span>
+        </button>
+
+        <button
+          type="button"
+          className={`bottom-tab ${currentSubpage === 'tutor' ? 'active' : ''}`}
+          onClick={() => navigate('/student/tutor')}
+        >
+          <span className="tab-icon">🤖</span>
+          <span className="tab-text">Tutor</span>
         </button>
 
         <button

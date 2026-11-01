@@ -1858,3 +1858,403 @@ begin
   return true;
 end;
 $$;
+
+-- ============================================================================
+-- 10. AI STUDY TUTOR & CHAT SAFETY
+-- ============================================================================
+
+create table if not exists ai_chat_messages (
+  id text primary key,
+  class_code text not null references classes(code) on delete cascade,
+  student_id text not null references students(id) on delete cascade,
+  concept_id text,
+  sender_role text not null check (sender_role in ('student', 'assistant')),
+  content text not null,
+  has_image boolean not null default false,
+  flagged boolean not null default false,
+  created_at bigint not null default (extract(epoch from now()) * 1000)::bigint
+);
+
+create index if not exists idx_ai_chat_student_time on ai_chat_messages(class_code, student_id, created_at desc);
+create index if not exists idx_ai_chat_class_flagged on ai_chat_messages(class_code, flagged);
+create index if not exists idx_ai_chat_concept on ai_chat_messages(class_code, concept_id) where concept_id is not null;
+
+alter table ai_chat_messages enable row level security;
+
+/**
+ * check_ai_rate_limit(p_class_code, p_student_id, p_has_image)
+ * Checks server-side rate limits:
+ * - 30 messages/hour
+ * - 100 messages/day
+ * - 5 images/hour
+ */
+create or replace function check_ai_rate_limit(
+  p_class_code text,
+  p_student_id text,
+  p_has_image boolean default false
+)
+returns jsonb
+language plpgsql
+security definer
+as $$
+declare
+  v_class_code text;
+  v_now bigint;
+  v_hour_ago bigint;
+  v_day_ago bigint;
+  v_hour_msgs int;
+  v_hour_images int;
+  v_day_msgs int;
+begin
+  v_class_code := upper(trim(coalesce(p_class_code, '')));
+  v_now := (extract(epoch from now()) * 1000)::bigint;
+  v_hour_ago := v_now - (3600 * 1000);
+  v_day_ago := v_now - (86400 * 1000);
+
+  if not exists (
+    select 1 from students where id = p_student_id and class_code = v_class_code
+  ) then
+    raise exception 'Student does not belong to this class' using errcode = 'P0001';
+  end if;
+
+  select count(*), count(*) filter (where has_image = true)
+  into v_hour_msgs, v_hour_images
+  from ai_chat_messages
+  where class_code = v_class_code
+    and student_id = p_student_id
+    and sender_role = 'student'
+    and created_at >= v_hour_ago;
+
+  select count(*)
+  into v_day_msgs
+  from ai_chat_messages
+  where class_code = v_class_code
+    and student_id = p_student_id
+    and sender_role = 'student'
+    and created_at >= v_day_ago;
+
+  if v_hour_msgs >= 30 then
+    return jsonb_build_object(
+      'allowed', false,
+      'reason', 'Hourly message limit reached (30/hour)',
+      'messages_left_hour', 0,
+      'messages_left_day', greatest(0, 100 - v_day_msgs),
+      'images_left_hour', greatest(0, 5 - v_hour_images)
+    );
+  end if;
+
+  if p_has_image and v_hour_images >= 5 then
+    return jsonb_build_object(
+      'allowed', false,
+      'reason', 'Hourly photo question limit reached (5/hour)',
+      'messages_left_hour', greatest(0, 30 - v_hour_msgs),
+      'messages_left_day', greatest(0, 100 - v_day_msgs),
+      'images_left_hour', 0
+    );
+  end if;
+
+  if v_day_msgs >= 100 then
+    return jsonb_build_object(
+      'allowed', false,
+      'reason', 'Daily message limit reached (100/day)',
+      'messages_left_hour', 0,
+      'messages_left_day', 0,
+      'images_left_hour', 0
+    );
+  end if;
+
+  return jsonb_build_object(
+    'allowed', true,
+    'messages_left_hour', greatest(0, 30 - v_hour_msgs),
+    'messages_left_day', greatest(0, 100 - v_day_msgs),
+    'images_left_hour', greatest(0, 5 - v_hour_images)
+  );
+end;
+$$;
+
+/**
+ * save_ai_message(p_class_code, p_student_id, p_message_id, p_concept_id, p_role, p_content, p_has_image, p_flagged, p_created_at)
+ * Saves a student or assistant message idempotently with class membership check.
+ */
+create or replace function save_ai_message(
+  p_class_code text,
+  p_student_id text,
+  p_message_id text,
+  p_concept_id text default null,
+  p_role text default 'student',
+  p_content text default '',
+  p_has_image boolean default false,
+  p_flagged boolean default false,
+  p_created_at bigint default null
+)
+returns jsonb
+language plpgsql
+security definer
+as $$
+declare
+  v_class_code text;
+  v_now bigint;
+  v_row record;
+begin
+  v_class_code := upper(trim(coalesce(p_class_code, '')));
+  v_now := coalesce(p_created_at, (extract(epoch from now()) * 1000)::bigint);
+
+  if not exists (
+    select 1 from students where id = p_student_id and class_code = v_class_code
+  ) then
+    raise exception 'Student does not belong to this class' using errcode = 'P0001';
+  end if;
+
+  insert into ai_chat_messages (
+    id, class_code, student_id, concept_id, sender_role, content, has_image, flagged, created_at
+  )
+  values (
+    coalesce(p_message_id, gen_random_uuid()::text),
+    v_class_code,
+    p_student_id,
+    p_concept_id,
+    case when p_role in ('student', 'assistant') then p_role else 'student' end,
+    p_content,
+    coalesce(p_has_image, false),
+    coalesce(p_flagged, false),
+    v_now
+  )
+  on conflict (id) do update set
+    flagged = excluded.flagged or ai_chat_messages.flagged
+  returning * into v_row;
+
+  return to_jsonb(v_row);
+end;
+$$;
+
+/**
+ * get_my_ai_messages(p_class_code, p_student_id, p_limit)
+ * Student reads own recent AI Tutor messages.
+ */
+create or replace function get_my_ai_messages(
+  p_class_code text,
+  p_student_id text,
+  p_limit int default 30
+)
+returns jsonb
+language plpgsql
+security definer
+as $$
+declare
+  v_class_code text;
+  v_rows jsonb;
+begin
+  v_class_code := upper(trim(coalesce(p_class_code, '')));
+
+  if not exists (
+    select 1 from students where id = p_student_id and class_code = v_class_code
+  ) then
+    raise exception 'Student does not belong to this class' using errcode = 'P0001';
+  end if;
+
+  select coalesce(
+    jsonb_agg(
+      jsonb_build_object(
+        'id', m.id,
+        'class_code', m.class_code,
+        'student_id', m.student_id,
+        'concept_id', m.concept_id,
+        'sender_role', m.sender_role,
+        'content', m.content,
+        'has_image', m.has_image,
+        'flagged', m.flagged,
+        'created_at', m.created_at
+      ) order by m.created_at asc
+    ),
+    '[]'::jsonb
+  ) into v_rows
+  from (
+    select *
+    from ai_chat_messages
+    where class_code = v_class_code and student_id = p_student_id
+    order by created_at desc
+    limit greatest(1, least(coalesce(p_limit, 30), 100))
+  ) m;
+
+  return v_rows;
+end;
+$$;
+
+/**
+ * get_class_ai_activity(p_class_code, p_pin)
+ * Teacher RPC: returns aggregate stats, top concepts in demand, and per-student breakdown.
+ */
+create or replace function get_class_ai_activity(
+  p_class_code text,
+  p_pin text
+)
+returns jsonb
+language plpgsql
+security definer
+as $$
+declare
+  v_class_code text;
+  v_stored_hash text;
+  v_total_messages int;
+  v_total_photos int;
+  v_total_flagged int;
+  v_student_breakdown jsonb;
+  v_top_concepts jsonb;
+  v_concept_insights jsonb;
+begin
+  v_class_code := upper(trim(coalesce(p_class_code, '')));
+  select pin_hash into v_stored_hash from classes where code = v_class_code;
+  if not found or v_stored_hash is null or v_stored_hash != extensions.crypt(trim(p_pin), v_stored_hash) then
+    raise exception 'Invalid class code or teacher PIN' using errcode = 'P0001';
+  end if;
+
+  select
+    count(*) filter (where sender_role = 'student'),
+    count(*) filter (where sender_role = 'student' and has_image = true),
+    count(*) filter (where flagged = true)
+  into v_total_messages, v_total_photos, v_total_flagged
+  from ai_chat_messages
+  where class_code = v_class_code;
+
+  select coalesce(
+    jsonb_agg(
+      jsonb_build_object(
+        'student_id', s.id,
+        'student_name', s.name,
+        'student_avatar', s.avatar,
+        'student_grade', s.grade,
+        'message_count', coalesce(m.msg_count, 0),
+        'photo_count', coalesce(m.photo_count, 0),
+        'flagged_count', coalesce(m.flagged_count, 0),
+        'last_active_at', m.last_active
+      ) order by coalesce(m.last_active, 0) desc, s.name asc
+    ),
+    '[]'::jsonb
+  ) into v_student_breakdown
+  from students s
+  left join (
+    select
+      student_id,
+      count(*) filter (where sender_role = 'student') as msg_count,
+      count(*) filter (where sender_role = 'student' and has_image = true) as photo_count,
+      count(*) filter (where flagged = true) as flagged_count,
+      max(created_at) as last_active
+    from ai_chat_messages
+    where class_code = v_class_code
+    group by student_id
+  ) m on s.id = m.student_id
+  where s.class_code = v_class_code;
+
+  select coalesce(
+    jsonb_agg(
+      jsonb_build_object(
+        'concept_id', c.concept_id,
+        'question_count', c.q_count,
+        'distinct_students', c.dist_students
+      ) order by c.q_count desc
+    ),
+    '[]'::jsonb
+  ) into v_top_concepts
+  from (
+    select
+      concept_id,
+      count(*) as q_count,
+      count(distinct student_id) as dist_students
+    from ai_chat_messages
+    where class_code = v_class_code
+      and sender_role = 'student'
+      and concept_id is not null
+    group by concept_id
+    limit 10
+  ) c;
+
+  select coalesce(
+    jsonb_agg(
+      jsonb_build_object(
+        'concept_id', c.concept_id,
+        'distinct_students', c.dist_students,
+        'total_questions', c.q_count
+      )
+    ),
+    '[]'::jsonb
+  ) into v_concept_insights
+  from (
+    select
+      concept_id,
+      count(*) as q_count,
+      count(distinct student_id) as dist_students
+    from ai_chat_messages
+    where class_code = v_class_code
+      and sender_role = 'student'
+      and concept_id is not null
+    group by concept_id
+    having count(distinct student_id) >= 3
+  ) c;
+
+  return jsonb_build_object(
+    'total_messages', coalesce(v_total_messages, 0),
+    'total_photos', coalesce(v_total_photos, 0),
+    'total_flagged', coalesce(v_total_flagged, 0),
+    'students', v_student_breakdown,
+    'top_concepts', v_top_concepts,
+    'remedial_insights', v_concept_insights
+  );
+end;
+$$;
+
+/**
+ * get_flagged_ai_conversations(p_class_code, p_pin, p_student_id)
+ * Teacher RPC: reads transcript only for flagged interactions.
+ */
+create or replace function get_flagged_ai_conversations(
+  p_class_code text,
+  p_pin text,
+  p_student_id text default null
+)
+returns jsonb
+language plpgsql
+security definer
+as $$
+declare
+  v_class_code text;
+  v_stored_hash text;
+  v_transcripts jsonb;
+begin
+  v_class_code := upper(trim(coalesce(p_class_code, '')));
+  select pin_hash into v_stored_hash from classes where code = v_class_code;
+  if not found or v_stored_hash is null or v_stored_hash != extensions.crypt(trim(p_pin), v_stored_hash) then
+    raise exception 'Invalid class code or teacher PIN' using errcode = 'P0001';
+  end if;
+
+  select coalesce(
+    jsonb_agg(
+      jsonb_build_object(
+        'id', m.id,
+        'student_id', m.student_id,
+        'student_name', s.name,
+        'concept_id', m.concept_id,
+        'sender_role', m.sender_role,
+        'content', m.content,
+        'has_image', m.has_image,
+        'flagged', m.flagged,
+        'created_at', m.created_at
+      ) order by m.created_at asc
+    ),
+    '[]'::jsonb
+  ) into v_transcripts
+  from ai_chat_messages m
+  join students s on m.student_id = s.id
+  where m.class_code = v_class_code
+    and (
+      m.student_id in (
+        select distinct sub.student_id
+        from ai_chat_messages sub
+        where sub.class_code = v_class_code and sub.flagged = true
+      )
+    )
+    and (p_student_id is null or m.student_id = p_student_id)
+  order by m.created_at asc;
+
+  return v_transcripts;
+end;
+$$;

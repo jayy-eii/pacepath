@@ -4,6 +4,11 @@ import { vi, beforeAll } from 'vitest'
 vi.stubEnv('VITE_SUPABASE_URL', '')
 vi.stubEnv('VITE_SUPABASE_ANON_KEY', '')
 
+// Set default online state in mock browser environment
+if (typeof navigator !== 'undefined') {
+  Object.defineProperty(navigator, 'onLine', { value: true, configurable: true, writable: true })
+}
+
 // Global network guard: unit tests must NEVER touch the network
 beforeAll(() => {
   vi.stubGlobal(

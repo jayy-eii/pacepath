@@ -16,6 +16,10 @@ interface ResultViewProps {
     studentAnswer?: string
     misconceptionTag?: string
   }) => void
+  onAskAITutor?: (context: {
+    questionTitle: string
+    conceptId?: string
+  }) => void
 }
 
 function formatTime(seconds: number): string {
@@ -25,7 +29,7 @@ function formatTime(seconds: number): string {
   return `${mins}m ${remSecs}s`
 }
 
-export function ResultView({ summary, student, lang, onRestart, onClose, onAskTeacher }: ResultViewProps) {
+export function ResultView({ summary, student, lang, onRestart, onClose, onAskTeacher, onAskAITutor }: ResultViewProps) {
   const isCelebration = summary.accuracyPct >= 70 && summary.totalQuestions > 0
   const misconceptionsCount = summary.misconceptionsCount || 0
 
@@ -242,6 +246,24 @@ export function ResultView({ summary, student, lang, onRestart, onClose, onAskTe
             >
               {lang === 'hi' ? 'अगला अभ्यास शुरू करें 🚀' : 'Practice Again 🚀'}
             </motion.button>
+            {onAskAITutor && (
+              <button
+                type="button"
+                className="btn btn-secondary ai-tutor-ask-btn"
+                style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}
+                onClick={() => {
+                  const topConcept = summary.perConcept[0]
+                  onAskAITutor({
+                    questionTitle: topConcept
+                      ? `Reviewing ${topConcept.conceptName[lang]}`
+                      : 'Practice Round Summary',
+                    conceptId: topConcept?.conceptId,
+                  })
+                }}
+              >
+                🤖 {lang === 'hi' ? 'एआई ट्यूटर से पूछें' : 'Ask AI Tutor'}
+              </button>
+            )}
             {onAskTeacher && (
               <button
                 type="button"

@@ -34,14 +34,14 @@ describe('Role & Session Management', () => {
       expect(getActiveRole()).toBeNull()
     })
 
-    it('sets and updates active role', () => {
+    it('sets and updates active role', async () => {
       setActiveRole('student')
       expect(getActiveRole()).toBe('student')
 
       setActiveRole('teacher')
       expect(getActiveRole()).toBe('teacher')
 
-      switchRoleOrLogout()
+      await switchRoleOrLogout()
       expect(getActiveRole()).toBeNull()
     })
 

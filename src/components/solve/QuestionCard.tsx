@@ -44,6 +44,12 @@ interface QuestionCardProps {
     studentAnswer?: string
     misconceptionTag?: string
   }) => void
+  onAskAITutor?: (context: {
+    questionId: string
+    questionTitle: string
+    studentAnswer?: string
+    conceptId?: string
+  }) => void
   onNext: () => void
   isLast: boolean
 }
@@ -58,6 +64,7 @@ export function QuestionCard({
   studentHistory,
   onAnswerSaved,
   onAskTeacher,
+  onAskAITutor,
   onNext,
   isLast,
 }: QuestionCardProps) {
@@ -608,7 +615,30 @@ export function QuestionCard({
             </div>
 
             {/* Next / Finish Button */}
-            <div className="feedback-action-bar" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '0.8rem' }}>
+            <div className="feedback-action-bar" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '0.8rem', flexWrap: 'wrap' }}>
+              {onAskAITutor && (
+                <button
+                  type="button"
+                  className="btn btn-secondary ai-tutor-ask-btn"
+                  style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.6rem 1rem' }}
+                  onClick={() => {
+                    let chosenText = ''
+                    if (selectedOption !== null && question.options) {
+                      chosenText = question.options[selectedOption]?.[lang] || String(selectedOption)
+                    } else if (typedAnswer) {
+                      chosenText = typedAnswer
+                    }
+                    onAskAITutor({
+                      questionId: question.id,
+                      questionTitle: question.text[lang],
+                      studentAnswer: chosenText || undefined,
+                      conceptId: question.conceptId,
+                    })
+                  }}
+                >
+                  🤖 {lang === 'hi' ? 'एआई ट्यूटर से पूछें' : 'Ask AI Tutor'}
+                </button>
+              )}
               {onAskTeacher && (
                 <button
                   type="button"

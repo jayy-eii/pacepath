@@ -2304,3 +2304,126 @@ export async function flagDoubtMessage(messageId: string, reason?: string): Prom
   }
   return true
 }
+
+export interface ClassAiActivityRow {
+  student_id: string
+  student_name: string
+  student_avatar: string
+  total_messages: number
+  photo_count: number
+  flagged_count: number
+  concept_id: string | null
+  last_active: number
+}
+
+export interface FlaggedAiConversationRow {
+  id: string
+  student_id: string
+  student_name: string
+  student_avatar: string
+  concept_id: string | null
+  sender_role: 'student' | 'assistant'
+  content: string
+  has_image: boolean
+  flagged: boolean
+  created_at: number
+}
+
+export const inMemoryAiActivity = new Map<string, ClassAiActivityRow[]>()
+export const inMemoryFlaggedAiMessages = new Map<string, FlaggedAiConversationRow[]>()
+
+/**
+ * RPC: get_class_ai_activity
+ * Returns aggregate AI tutor activity per student for a class.
+ */
+export async function getClassAiActivity(classCode: string, pin: string): Promise<ClassAiActivityRow[]> {
+  const cleanCode = classCode.trim().toUpperCase()
+  const cleanPin = pin.trim()
+
+  if (SUPABASE_URL && SUPABASE_ANON_KEY && typeof fetch !== 'undefined') {
+    try {
+      const response = await fetch(`${SUPABASE_URL}/rest/v1/rpc/get_class_ai_activity`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          apikey: SUPABASE_ANON_KEY,
+          Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify({
+          p_class_code: cleanCode,
+          p_pin: cleanPin,
+        }),
+      })
+
+      if (response.ok) {
+        return (await response.json()) as ClassAiActivityRow[]
+      }
+      const err = await response.json().catch(() => ({}))
+      throw new Error(err?.message || 'Failed to fetch class AI activity')
+    } catch (e) {
+      if (e instanceof Error && e.message.includes('Invalid')) {
+        throw e
+      }
+    }
+  }
+
+  // Local fallback
+  if (!verifyLocalTeacherPin(cleanCode, cleanPin)) {
+    throw new Error('Invalid class code or teacher PIN')
+  }
+
+  return inMemoryAiActivity.get(cleanCode) || []
+}
+
+/**
+ * RPC: get_flagged_ai_conversations
+ * Returns flagged AI tutor messages for safety review.
+ */
+export async function getFlaggedAiConversations(
+  classCode: string,
+  pin: string,
+  studentId?: string,
+): Promise<FlaggedAiConversationRow[]> {
+  const cleanCode = classCode.trim().toUpperCase()
+  const cleanPin = pin.trim()
+
+  if (SUPABASE_URL && SUPABASE_ANON_KEY && typeof fetch !== 'undefined') {
+    try {
+      const response = await fetch(`${SUPABASE_URL}/rest/v1/rpc/get_flagged_ai_conversations`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          apikey: SUPABASE_ANON_KEY,
+          Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify({
+          p_class_code: cleanCode,
+          p_pin: cleanPin,
+          p_student_id: studentId || null,
+        }),
+      })
+
+      if (response.ok) {
+        return (await response.json()) as FlaggedAiConversationRow[]
+      }
+      const err = await response.json().catch(() => ({}))
+      throw new Error(err?.message || 'Failed to fetch flagged AI conversations')
+    } catch (e) {
+      if (e instanceof Error && e.message.includes('Invalid')) {
+        throw e
+      }
+    }
+  }
+
+  // Local fallback
+  if (!verifyLocalTeacherPin(cleanCode, cleanPin)) {
+    throw new Error('Invalid class code or teacher PIN')
+  }
+
+  const list = inMemoryFlaggedAiMessages.get(cleanCode) || []
+  if (studentId) {
+    return list.filter((m) => m.student_id === studentId)
+  }
+  return list
+}
+

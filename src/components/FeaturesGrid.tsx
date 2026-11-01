@@ -64,6 +64,15 @@ export function FeaturesGrid({ lang = 'en' }: FeaturesGridProps) {
       icon: '💬',
     },
     {
+      id: 's-aitutor',
+      title: isHi ? 'एआई अध्ययन ट्यूटर (टेक्स्ट + फ़ोटो)' : 'AI Study Tutor (Text + Photo)',
+      desc: isHi
+        ? 'कक्षा 6–10 एनसीईआरटी गणित के लिए सुरक्षित एआई ट्यूटर। प्रश्न पूछें या फ़ोटो अपलोड करें; पेसपाथ मैथ्स इंजन द्वारा गणना सत्यापित।'
+        : 'Safe, hint-first AI tutor for Classes 6–10 NCERT maths. Ask questions or upload notebook photos; verified by offline math engine.',
+      status: 'live',
+      icon: '🤖',
+    },
+    {
       id: 's-learn',
       title: isHi ? 'अवधारणा दृश्य पाठ (Learn Modules)' : 'Concept Visual Learn Modules',
       desc: isHi
@@ -137,6 +146,15 @@ export function FeaturesGrid({ lang = 'en' }: FeaturesGridProps) {
         : 'Cohort-level procedural misconception rankings and multi-student alert triggers (>=3 students & >=5 events).',
       status: 'live',
       icon: '🚨',
+    },
+    {
+      id: 't-aitutor',
+      title: isHi ? 'एआई ट्यूटर सुरक्षा एवं मांग अंतर्दृष्टि' : 'AI Tutor Analytics & Safety Oversight',
+      desc: isHi
+        ? 'छात्रों के प्रश्नों, फ़ोटो उपयोग की निगरानी, सुरक्षा फ्लैग समीक्षा, और सामूहिक अवधारणा मांग (≥3 छात्र) का स्वतः पता लगाना।'
+        : 'Monitor student AI queries, photo uploads, safety flags, and detect class-wide concept demand (≥3 students).',
+      status: 'live',
+      icon: '🛡️',
     },
     {
       id: 't-parents',

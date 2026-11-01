@@ -33,6 +33,7 @@ import {
 } from '../services/roleSession'
 import { CreateTestWizardModal } from './teacher/CreateTestWizardModal'
 import { AssignmentResultsView } from './teacher/AssignmentResultsView'
+import { TeacherAiTutorTab } from './teacher/TeacherAiTutorTab'
 import rawConcepts from '../data/concepts.json'
 import rawQuestions from '../data/questions.json'
 import rawActivities from '../data/teacherActivities.json'
@@ -65,7 +66,7 @@ interface TeacherSession {
   pin: string
 }
 
-type DashboardTab = 'overview' | 'students' | 'heatmap' | 'groups' | 'tests' | 'doubts' | 'misconceptions'
+type DashboardTab = 'overview' | 'students' | 'heatmap' | 'groups' | 'tests' | 'doubts' | 'misconceptions' | 'ai-tutor'
 
 const TEACHER_SESSION_KEY = 'pacepath_teacher_session'
 
@@ -696,6 +697,16 @@ export function TeacherDashboardModal({
             <span className="nav-label">{lang === 'hi' ? 'भ्रांतियां' : 'Misconceptions'}</span>
             {miscSummaries.length > 0 && <span className="tab-counter-badge">{miscSummaries.length}</span>}
           </button>
+          <button
+            type="button"
+            className={`sidebar-nav-btn ${activeTab === 'ai-tutor' ? 'active' : ''}`}
+            onClick={() => handleSelectTab('ai-tutor')}
+            role="tab"
+            aria-selected={activeTab === 'ai-tutor'}
+          >
+            <span className="nav-icon">🤖</span>
+            <span className="nav-label">{lang === 'hi' ? 'एआई ट्यूटर' : 'AI Tutor'}</span>
+          </button>
         </nav>
 
         <div className="sidebar-footer">
@@ -833,6 +844,15 @@ export function TeacherDashboardModal({
           >
             🧩 {lang === 'hi' ? 'भ्रांतियां' : 'Misconceptions'}
             {miscSummaries.length > 0 && <span className="tab-counter-badge">{miscSummaries.length}</span>}
+          </button>
+          <button
+            type="button"
+            className={`mobile-scroll-tab ${activeTab === 'ai-tutor' ? 'active' : ''}`}
+            onClick={() => handleSelectTab('ai-tutor')}
+            role="tab"
+            aria-selected={activeTab === 'ai-tutor'}
+          >
+            🤖 {lang === 'hi' ? 'एआई ट्यूटर' : 'AI Tutor'}
           </button>
         </div>
       </header>
@@ -1141,6 +1161,15 @@ export function TeacherDashboardModal({
                 >
                   🧩 {lang === 'hi' ? 'भ्रांतियां' : 'Misconceptions'}
                   {miscSummaries.length > 0 && <span className="tab-counter-badge">{miscSummaries.length}</span>}
+                </button>
+                <button
+                  type="button"
+                  className={`teacher-nav-tab ${activeTab === 'ai-tutor' ? 'active' : ''}`}
+                  onClick={() => handleSelectTab('ai-tutor')}
+                  role="tab"
+                  aria-selected={activeTab === 'ai-tutor'}
+                >
+                  🤖 {lang === 'hi' ? 'एआई ट्यूटर' : 'AI Tutor'}
                 </button>
               </div>
             )}
@@ -2399,6 +2428,14 @@ export function TeacherDashboardModal({
                   </div>
                 )}
               </div>
+            )}
+
+            {activeTab === 'ai-tutor' && (
+              <TeacherAiTutorTab
+                classCode={session.classCode}
+                pin={session.pin}
+                lang={lang}
+              />
             )}
       </main>
     )
